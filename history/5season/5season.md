@@ -611,7 +611,7 @@ Papamama: *ответ неизвестен*
 
 - Обновлён плагин на рыбалку - появилась новая мини-игра а также изменен баланс
 
-- Добавлены новые наборы обликов - ChainsawMan и JoJo (которые можно купить на [нашем сайте](https://donate.catcraftmc.ru))
+- Добавлены новые наборы обликов - ChainsawMan и JoJo (которые можно купить на [нашем сайте](https://donate.catcraft.ru))
 
 - В `/menu` добавлены настройки игрока
 
@@ -651,7 +651,7 @@ Papamama: *ответ неизвестен*
 
 - Энд был расширен!
 
-- `wiki.catcraftmc.ru` теперь ведёт на эту версию Вики!
+- `wiki.catcraft.ru` теперь ведёт на эту версию Вики!
 
 ![Старая Вики](/assets/server_history/season5/old_wiki.webp){ decoding="async" loading="lazy" }
 

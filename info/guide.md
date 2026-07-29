@@ -32,9 +32,7 @@ aside: false
 Написал(а) заявку и её приняли? Замечательно! Заходи по этим IP и наслаждайся!
 
 ::: tip Наши IP
-`play.catcraftmc.ru` - основной
-
-`play.catcraft.ru` - запасной
+`play.catcraft.ru`
 
 Мы играем на **1.21.8 Java**!
 :::

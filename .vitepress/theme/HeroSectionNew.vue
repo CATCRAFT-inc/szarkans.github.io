@@ -109,7 +109,7 @@ onMounted(async () => {
   try {
     const ctrl = new AbortController()
     const t = setTimeout(() => ctrl.abort(), 5000)
-    const res = await fetch('https://api.mcsrvstat.us/2/play.catcraftmc.ru', { signal: ctrl.signal })
+    const res = await fetch('https://api.mcsrvstat.us/2/play.catcraft.ru', { signal: ctrl.signal })
     clearTimeout(t)
     const data = await res.json()
     playerCount.value = data.players?.online ?? 0

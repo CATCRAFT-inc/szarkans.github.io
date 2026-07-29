@@ -188,7 +188,7 @@ export default defineConfig({
         '<div><img src="https://mc.yandex.ru/watch/107063260" style="position:absolute; left:-9999px;" alt="" /></div>'
       ]
     ];
-    const siteUrl = 'https://wiki.catcraftmc.ru';
+    const siteUrl = 'https://wiki.catcraft.ru';
 
     const pageTitle = pageData.title || 'Кошкокрафт';
     const pageDescription = pageData.description || pageData.frontmatter?.description || 'Вики самого Кошачьего сервера - Кошкокрафт!';
@@ -253,7 +253,7 @@ export default defineConfig({
   appearance: 'force-dark',
 
   sitemap: {
-    hostname: 'https://wiki.catcraftmc.ru',
+    hostname: 'https://wiki.catcraft.ru',
     transformItems: (items) => {
       return items.map((item) => {
         if (item.url === '') {
@@ -300,14 +300,14 @@ export default defineConfig({
     // og:type задаётся динамически в transformHead (website / article)
     ['meta', { property: 'og:locale', content: 'ru_RU' }],
     ['meta', { property: 'og:site_name', content: 'Кошкокрафт Вики' }],
-    ['meta', { property: 'og:image', content: 'https://wiki.catcraftmc.ru/og-image.png' }],
+    ['meta', { property: 'og:image', content: 'https://wiki.catcraft.ru/og-image.png' }],
     ['meta', { property: 'og:image:width', content: '1200' }],
     ['meta', { property: 'og:image:height', content: '630' }],
     ['meta', { property: 'og:image:alt', content: 'Вики самого Кошачьего сервера - Кошкокрафт!' }],
 
     // SEO: Twitter Card Meta Tags
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
-    ['meta', { name: 'twitter:image', content: 'https://wiki.catcraftmc.ru/og-image.png' }],
+    ['meta', { name: 'twitter:image', content: 'https://wiki.catcraft.ru/og-image.png' }],
     ['meta', { name: 'twitter:image:alt', content: 'Вики самого Кошачьего сервера - Кошкокрафт!' }],
 
     // SEO: Additional Meta Tags
@@ -322,8 +322,8 @@ export default defineConfig({
       '@type': 'Organization',
       name: 'Кошкокрафт',
       alternateName: 'CatCraft',
-      url: 'https://wiki.catcraftmc.ru',
-      logo: 'https://wiki.catcraftmc.ru/icon_purple.png',
+      url: 'https://wiki.catcraft.ru',
+      logo: 'https://wiki.catcraft.ru/icon_purple.png',
       sameAs: [
         'https://discord.gg/6f3FwFRJWC',
         'https://t.me/catcraftmc_tg',
@@ -430,7 +430,7 @@ export default defineConfig({
       { icon: 'discord', link: 'https://discord.gg/6f3FwFRJWC' },
       { icon: 'telegram', link: 'https://t.me/catcraftmc_tg' },
       { icon: 'youtube', link: 'https://youtube.com/@catcraftminecraft' },
-      { icon: 'googlemaps', link: "https://map.catcraftmc.ru"}
+      { icon: 'googlemaps', link: "https://map.catcraft.ru"}
     ],
 
     sidebar: {

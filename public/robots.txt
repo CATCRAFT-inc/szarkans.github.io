@@ -1,8 +1,8 @@
 # Robots.txt for Кошкокрафт Wiki
-# https://wiki.catcraftmc.ru
+# https://wiki.catcraft.ru
 
 User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://wiki.catcraftmc.ru/sitemap.xml
+Sitemap: https://wiki.catcraft.ru/sitemap.xml
