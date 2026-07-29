@@ -49,7 +49,7 @@ CharaBell купила пост у Репортёров о том, что она
 
 1. px239apen  ![Постройка px293apen на конкурсе строителей](/assets/server_history/season6/px239apen_build.webp)
 
-2. dark_moooon  ![Постройка dark_moooon на конкурсе строителей](/assets/server_history/season6/dark_mooon_build.webp)
+2. dark_moooon  ![Постройка dark_moooon на конкурсе строителей](/assets/server_history/season6/dark_moooon_build.webp)
 
 3. ytrbqdkflbvbhy ![Постройка ytrbqdkflbvbhy на конкурсе строителей](/assets/server_history/season6/ytrbqdkflbvbhy_build.webp)
 

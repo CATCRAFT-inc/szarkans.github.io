@@ -84,7 +84,7 @@ const reviews = ref([
     text: 'КошкоКрафт очень крутой сервер...'
   },
   {
-    avatar: 'https://cravatar.eu/avatar/dark_mooon/50.png',
+    avatar: 'https://cravatar.eu/avatar/dark_moooon/50.png',
     name: 'dark_moooon',
     text: 'Кошкокрафт это мой второй сервер, где я остался окончательно...'
   },
