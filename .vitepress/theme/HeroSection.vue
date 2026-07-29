@@ -37,7 +37,7 @@
         <span class="status-line"></span>
       </div>
 
-      <span class="version-tag">1.21.8 Java Edition</span>
+      <span class="version-tag">1.21.11 Java Edition</span>
 
       <!-- CTA buttons -->
       <div class="hero-buttons">

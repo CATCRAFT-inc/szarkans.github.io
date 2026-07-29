@@ -27,7 +27,7 @@
         <span class="pill" :class="statusCls">
           <i class="pill__dot"></i>{{ statusText }}
         </span>
-        <span class="pill pill--muted">1.21.8 Java</span>
+        <span class="pill pill--muted">1.21.11 Java</span>
       </div>
 
       <div class="hero__cta anim-up" style="--d:.65s">
