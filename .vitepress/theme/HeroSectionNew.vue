@@ -27,7 +27,7 @@
         <span class="pill" :class="statusCls">
           <i class="pill__dot"></i>{{ statusText }}
         </span>
-        <span class="pill pill--muted">1.21.8 Java</span>
+        <span class="pill pill--muted">1.21.11 Java</span>
       </div>
 
       <div class="hero__cta anim-up" style="--d:.65s">
@@ -109,7 +109,7 @@ onMounted(async () => {
   try {
     const ctrl = new AbortController()
     const t = setTimeout(() => ctrl.abort(), 5000)
-    const res = await fetch('https://api.mcsrvstat.us/2/play.catcraftmc.ru', { signal: ctrl.signal })
+    const res = await fetch('https://api.mcsrvstat.us/2/play.catcraft.ru', { signal: ctrl.signal })
     clearTimeout(t)
     const data = await res.json()
     playerCount.value = data.players?.online ?? 0

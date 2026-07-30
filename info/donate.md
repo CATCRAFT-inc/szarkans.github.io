@@ -4,7 +4,7 @@ aside: false
 
 # Донатик
 
-Донатик можно приобрести на нашем [сайте донатика](https://donate.catcraftmc.ru)!
+Донатик можно приобрести на нашем [сайте донатика](https://donate.catcraft.ru)!
 
 ### Котик+ {#kplus}
 
@@ -52,7 +52,7 @@ aside: false
 
 - Ежедневный кит с плюшками! 
 
-<Button as="a" href="https://donate.catcraftmc.ru" target="_blank" rel="noopener" label="Приобрести на сайте" icon="pi pi-external-link" />
+<Button as="a" href="https://donate.catcraft.ru" target="_blank" rel="noopener" label="Приобрести на сайте" icon="pi pi-external-link" />
 :::
 
 ## Облики {#skins}

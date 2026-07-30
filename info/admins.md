@@ -10,7 +10,7 @@ aside: false
         <img alt="user header" src="https://vzge.me/face/512/bykkake747?y=-40" />
     </template>
     <template #title>Главный разработчик bykkake747</template>
-    <template #subtitle>твою мать.</template>
+    <template #subtitle>дядя гриб</template>
 </Card>
 <Card style="width: 25rem; overflow: hidden" class="m-0">
     <template #header>
@@ -22,13 +22,6 @@ aside: false
 </CardGrid>
 
 <CardGrid>
-<Card style="width: 25rem; overflow: hidden" class="m-0">
-    <template #header>
-        <img alt="user header" src="https://vzge.me/face/512/sm1lly?y=-40" />
-    </template>
-    <template #title>Дизайнер и лоровед sm1lly</template>
-    <template #subtitle>ваня бэстов.</template>
-</Card>
 <Card style="width: 25rem; overflow: hidden" class="m-0">
     <template #header>
         <img alt="user header" src="https://vzge.me/face/512/ShirooQWT?y=-40" />
@@ -53,20 +46,6 @@ aside: false
     <template #title>Менеджер кайфа jeaas</template>
     <template #subtitle>кзанакс мать его мен</template>
 </Card>
-<Card style="width: 25rem; overflow: hidden" class="m-0">
-    <template #header>
-        <img alt="user header" src="https://vzge.me/face/512/JOY6OY?y=-40" />
-    </template>
-    <template #title>СММ JOY6OY</template>
-    <template #subtitle>лысость</template>
-</Card>
-<Card style="width: 25rem; overflow: hidden" class="m-0">
-    <template #header>
-        <img alt="user header" src="https://vzge.me/face/512/ascett?y=-40" />
-    </template>
-    <template #title>Тех. админ ascett</template>
-    <template #subtitle>аскетичненько</template>
-</Card>
 </CardGrid>
 
 ## Всекотята | Модераторы
@@ -74,9 +53,21 @@ aside: false
 <CardGrid>
 <Card style="width: 25rem; overflow: hidden" class="m-0">
     <template #header>
-        <img alt="user header" src="https://vzge.me/face/512/artlaks?y=-40" />
+        <img alt="user header" src="https://vzge.me/face/512/Cr1stal?y=-40" />
     </template>
-    <template #title>artlaks</template>
+    <template #title>Cr1stal</template>
+</Card>
+<Card style="width: 25rem; overflow: hidden" class="m-0">
+    <template #header>
+        <img alt="user header" src="https://vzge.me/face/512/Abauch?y=-40" />
+    </template>
+    <template #title>Abauch</template>
+</Card>
+<Card style="width: 25rem; overflow: hidden" class="m-0">
+    <template #header>
+        <img alt="user header" src="https://vzge.me/face/512/ralsk0l?y=-40" />
+    </template>
+    <template #title>ralsk0l</template>
 </Card>
 <Card style="width: 25rem; overflow: hidden" class="m-0">
     <template #header>
