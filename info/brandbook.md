@@ -85,12 +85,6 @@ aside: false
 </Card>
 <Card style="overflow: hidden;" class="m-0">
     <template #header>
-        <Image alt="user header" src="https://mineskin.eu/skin/cantcaaat" preview />
-    </template>
-    <template #subtitle>cantcaaat</template>
-</Card>
-<Card style="overflow: hidden;" class="m-0">
-    <template #header>
         <Image alt="user header" src="https://mineskin.eu/skin/ShirooQWT" preview />
     </template>
     <template #subtitle>ShirooQWT</template>
