@@ -36,7 +36,7 @@ const startPlayingSidebar = [
       { text: 'Фермы, ядро сервера', link: '/info/farm.md' },
       { text: 'Как скачивать моды?', link: '/guides/tech/mod_download.md' },
       { text: 'Ошибки с модами на Fabric', link: '/guides/tech/mod_errors.md' },
-      { text: 'Фикс скинов на ТЛаунчере', link: '/guides/tech/skins_tlauncher.md' },
+      // { text: 'Фикс скинов на ТЛаунчере', link: '/guides/tech/skins_tlauncher.md' }, - скрыто
       { text: 'Какой лаунчер выбрать?', link: '/guides/other/launcher.md' },
       { text: 'Как редактировать Вики?', link: '/guides/other/edit_wiki.md' }
     ]
@@ -48,9 +48,9 @@ const mechanicsSidebar = [
   {
     text: 'Роллплей',
     items: [
-      { text: 'Правительство', link: '/gameplay/roleplay/goverment.md' },
+      // { text: 'Правительство', link: '/gameplay/roleplay/goverment.md' }, - скрыто
+      // { text: 'Работа КСБ', link: '/gameplay/roleplay/police.md' }, - скрыто
       { text: 'РП роли', link: '/gameplay/roleplay/other_roles.md' },
-      { text: 'Работа КСБ', link: '/gameplay/roleplay/police.md' },
     ]
   },
   {
@@ -168,6 +168,36 @@ export default defineConfig({
   lang: 'ru',
   description: "Вики самого Кошачьего сервера - Кошкокрафт!",
   base: '/',
+
+  // Служебные .md вне вики: план-доки задач, README, файлы Claude Code.
+  // Без этого VitePress собирает их как страницы сайта, и docs:build краснеет
+  // на ссылках внутри рабочих заметок.
+  srcExclude: [
+    'docs/**', 'README.md', 'CLAUDE.md', 'CLAUDE.local.md', 'vibecode/**',
+
+    // Скрытые страницы: файлы остаются в репозитории, но сайт их не собирает -
+    // по прямой ссылке их тоже не открыть. Вернуть = убрать строку отсюда.
+    'guides/work/gksb.md',              // КСБ распущен
+    'guides/work/police.md',            // КСБ распущен
+    'guides/tech/skins_tlauncher.md',   // сервер теперь лицензионный
+
+    // Механики и Бестиарий целиком - в процессе переписывания.
+    // Открытыми остаются только заглушки gameplay/main.md и bestiary/main.md.
+    'gameplay/roleplay/**',
+    'gameplay/unique/**',
+    'bestiary/blocks/**',
+    'bestiary/custom_items/**',
+    'bestiary/materials/**',
+    'bestiary/mobs/**',
+    'bestiary/usable/**',
+    'bestiary/vanilla/**',
+    'bestiary/enchantments.md',
+    'bestiary/test.md',
+  ],
+
+  // Пока разделы скрыты, ссылки на них из истории, патчноутов и других
+  // страниц ведут в никуда. Не вычищаем их: разделы вернутся, ссылки оживут.
+  ignoreDeadLinks: [/gameplay\//, /bestiary\//],
 
   transformHead: ({ pageData }) => {
     const head = [
@@ -420,7 +450,7 @@ export default defineConfig({
     langMenuLabel: 'Изменить язык',
     nav: [
       { text: 'Начать играть', link: '/info/faq' },
-      { text: 'Механики', link: '/gameplay/unique/qol/small_features' },
+      { text: 'Механики', link: '/gameplay/main.md' },
       { text: 'Бестиарий', link: '/bestiary/main.md' },
       { text: 'История', link: '/history/1season/1season.md' },
       { text: 'Обновления', link: '/updates/7season/7_0_4.md' }
@@ -669,8 +699,8 @@ export default defineConfig({
       ],
       '/info/': startPlayingSidebar,
       '/guides/': startPlayingSidebar,
-      '/gameplay/': mechanicsSidebar,
-      '/bestiary': bestiarySidebar,
+      // '/gameplay/': mechanicsSidebar,   - раздел скрыт
+      // '/bestiary': bestiarySidebar,     - раздел скрыт
       '/history/': [
         {
           text: '1 сезон',
