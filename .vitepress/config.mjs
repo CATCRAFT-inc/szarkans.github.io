@@ -177,12 +177,27 @@ export default defineConfig({
 
     // Скрытые страницы: файлы остаются в репозитории, но сайт их не собирает -
     // по прямой ссылке их тоже не открыть. Вернуть = убрать строку отсюда.
-    'gameplay/roleplay/goverment.md',   // структура власти пересобирается
-    'gameplay/roleplay/police.md',      // КСБ распущен
     'guides/work/gksb.md',              // КСБ распущен
     'guides/work/police.md',            // КСБ распущен
     'guides/tech/skins_tlauncher.md',   // сервер теперь лицензионный
+
+    // Механики и Бестиарий целиком - в процессе переписывания.
+    // Открытыми остаются только заглушки gameplay/main.md и bestiary/main.md.
+    'gameplay/roleplay/**',
+    'gameplay/unique/**',
+    'bestiary/blocks/**',
+    'bestiary/custom_items/**',
+    'bestiary/materials/**',
+    'bestiary/mobs/**',
+    'bestiary/usable/**',
+    'bestiary/vanilla/**',
+    'bestiary/enchantments.md',
+    'bestiary/test.md',
   ],
+
+  // Пока разделы скрыты, ссылки на них из истории, патчноутов и других
+  // страниц ведут в никуда. Не вычищаем их: разделы вернутся, ссылки оживут.
+  ignoreDeadLinks: [/gameplay\//, /bestiary\//],
 
   transformHead: ({ pageData }) => {
     const head = [
@@ -435,7 +450,7 @@ export default defineConfig({
     langMenuLabel: 'Изменить язык',
     nav: [
       { text: 'Начать играть', link: '/info/faq' },
-      { text: 'Механики', link: '/gameplay/unique/qol/small_features' },
+      { text: 'Механики', link: '/gameplay/main.md' },
       { text: 'Бестиарий', link: '/bestiary/main.md' },
       { text: 'История', link: '/history/1season/1season.md' },
       { text: 'Обновления', link: '/updates/7season/7_0_4.md' }
@@ -684,8 +699,8 @@ export default defineConfig({
       ],
       '/info/': startPlayingSidebar,
       '/guides/': startPlayingSidebar,
-      '/gameplay/': mechanicsSidebar,
-      '/bestiary': bestiarySidebar,
+      // '/gameplay/': mechanicsSidebar,   - раздел скрыт
+      // '/bestiary': bestiarySidebar,     - раздел скрыт
       '/history/': [
         {
           text: '1 сезон',
