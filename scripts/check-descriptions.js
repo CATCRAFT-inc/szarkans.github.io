@@ -60,3 +60,6 @@ for (const dir of contentDirs) {
 
 console.log(`📊 Found ${missingDescriptions.length} pages without descriptions:\n`);
 missingDescriptions.forEach(file => console.log(`  - ${file}`));
+
+// Ненулевой код выхода, иначе проверку нельзя поставить в гейт: она всегда зелёная.
+if (missingDescriptions.length > 0) process.exit(1);
