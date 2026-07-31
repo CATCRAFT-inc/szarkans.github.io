@@ -63,11 +63,6 @@ aside: false
 
 <Image src="/assets/info/map/spawn_syd.webp" alt="" width="80%" preview />
 
-==Участок КСБ
-Здесь проводят теоретические занятия для Кадетов. А в местном СИЗО отсиживают срок непослушные котики...
-
-<Image src="/assets/info/map/spawn_ksb.webp" alt="" width="80%" preview />
-
 ==Музыка
 Здесь можно выжечь свою музыку на пластинке!
 

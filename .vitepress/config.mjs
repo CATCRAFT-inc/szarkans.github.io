@@ -49,7 +49,6 @@ const mechanicsSidebar = [
     items: [
       { text: 'Правительство', link: '/gameplay/roleplay/goverment.md' },
       { text: 'РП роли', link: '/gameplay/roleplay/other_roles.md' },
-      { text: 'Работа КСБ', link: '/gameplay/roleplay/police.md' },
     ]
   },
   {
