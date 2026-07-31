@@ -36,7 +36,6 @@ const startPlayingSidebar = [
       { text: 'Фермы, ядро сервера', link: '/info/farm.md' },
       { text: 'Как скачивать моды?', link: '/guides/tech/mod_download.md' },
       { text: 'Ошибки с модами на Fabric', link: '/guides/tech/mod_errors.md' },
-      { text: 'Фикс скинов на ТЛаунчере', link: '/guides/tech/skins_tlauncher.md' },
       { text: 'Какой лаунчер выбрать?', link: '/guides/other/launcher.md' },
       { text: 'Как редактировать Вики?', link: '/guides/other/edit_wiki.md' }
     ]
@@ -168,6 +167,11 @@ export default defineConfig({
   lang: 'ru',
   description: "Вики самого Кошачьего сервера - Кошкокрафт!",
   base: '/',
+
+  // Служебные .md вне вики: план-доки задач, README, файлы Claude Code.
+  // Без этого VitePress собирает их как страницы сайта, и docs:build краснеет
+  // на ссылках внутри рабочих заметок.
+  srcExclude: ['docs/**', 'README.md', 'CLAUDE.md', 'CLAUDE.local.md', 'vibecode/**'],
 
   transformHead: ({ pageData }) => {
     const head = [

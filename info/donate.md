@@ -8,27 +8,21 @@ aside: false
 
 ### Котик+ {#kplus}
 
-**Котик+** - привилегия-подписка на нашем сервере, добавляющая полезные, но балансные команды:
+**Котик+** - привилегия-подписка на нашем сервере, добавляющая полезные, но балансные возможности:
 
-::: warning Команды К+
+::: warning Что входит в К+
 
-- `/ec` - виртуальный эндер-сундук + 6 строчек
-  
-- `/back` - вернуться на место смерти раз в 3 часа
+- **Ежедневный кит**: 16 говядины, 32 бутылочки опыта, 1 золотое яблоко и 1 конфета, телепортирующая к своей кровати (а если кровати нет - на спавн)
 
-- `/spawn` - телепортация на спавн раз в 6 часов
+- Расширенный **игнор-лист**
 
-- `/tpaaccept` - возможность принять запрос на телепортацию от игроков
+- Кастомный **цвет ника**
 
-- `/itemname` - поменять название предмета
+- Расширенная **почта**
 
-- `/nick` - поменять себе ник на любой, в т.ч. цветной или даже [градиентный](../guides/gameplay/rgb_nick.md)!
+- Увеличенная вместимость **кошелька**
 
-- `/heal` - вылечить себя раз в 5 минут
-
-- `/feed` - насытить себя раз в 5 минут
-
-- `/wb` - виртуальный верстак
+- **Айтемлор** и **айтемнейм** на оружие и броню
 
 - `/hat` - надеть предмет на голову
 
@@ -36,21 +30,9 @@ aside: false
 
     - Через цветовые теги по типу `&e`, `&4`, `&l` и т.п.
 
-- `/repair`- починить предмет в руке раз в 12 часов
+- **Эндер-сундук** целиком: без К+ игроку доступна только одна строка, с К+ - все три
 
-- `/anvil`- виртуальная наковальня
-
-- `/loom` - виртуальный ткацкий станок
-
-- `/smithingtable` - виртуальный кузнечный стол
-
-- Опыт не пропадает при смерти!
-
-- Увеличенное время АФК!
-
-- Возможность открывать шалкер в руке с помощью `Shift` + `ПКМ`!
-
-- Ежедневный кит с плюшками! 
+- `/tpa` - телепортация к игрокам. Отправить и принять запрос можно, только если К+ есть у **обоих**
 
 <Button as="a" href="https://donate.catcraft.ru" target="_blank" rel="noopener" label="Приобрести на сайте" icon="pi pi-external-link" />
 :::
@@ -61,115 +43,6 @@ aside: false
 
 **Важно!** При покупке тебе выдаются [**свитки обликов**](/bestiary/usable/scroll.md) - эти свитки ты можешь наложить на свои существующие предметы.
 
-<CardGrid>
-
-<Card style="width: 25rem; overflow: hidden" class="m-0">
-    <template #header>
-        <Image alt="user header" src="/assets/info/donate/aot.webp" preview />
-    </template>
-    <template #title>Набор Атака титанов</template>
-    <template #content>
-        <p>Набор из УПМ и косметической брони Развед-Корпуса!</p>
-        <p>В наборе:</p>
-        <ul>
-            <li>УПМ во основную руку — очень прочная крюк-кошка, которая одновременно является оружием!</li>
-            <li>УПМ во вторую руку — устройство пространственного маневрирования!</li>
-            <li>Косметическая броня Развед-корпуса!</li>
-        </ul>
-    </template>
-</Card>
-
-<Card style="width: 25rem; overflow: hidden" class="m-0">
-    <template #header>
-        <Image alt="user header" src="/assets/info/donate/chainsawman.webp" preview />
-    </template>
-    <template #title>Набор ChainsawMan</template>
-    <template #content>
-        <p>Набор скинов из аниме Человек-бензопила!</p>
-        <p>В наборе:</p>
-        <ul>
-            <li>Шлем Человека-бензопилы</li>
-            <li>Два скина на мечи в виде Бензопил</li>
-            <li>Четыре тотема Пауэр</li>
-        </ul>
-    </template>
-</Card>
-
-</CardGrid>
-
-<CardGrid>
-
-<Card style="width: 25rem; overflow: hidden" class="m-0">
-    <template #header>
-        <Image alt="user header" src="/assets/info/donate/jojo.webp" preview />
-    </template>
-    <template #title>Набор JoJo</template>
-    <template #content>
-        <p>Набор скинов на тотемы из <span class="purple">Jojo</span>!</p>
-        <p>В наборе по 4 Свитка Обликов на тотемы с разными стендами!</p>
-    </template>
-</Card>
-
-<Card style="width: 25rem; overflow: hidden" class="m-0">
-    <template #header>
-        <Image alt="user header" src="/assets/info/donate/berserk.webp" preview />
-    </template>
-    <template #title>Набор BERSERK</template>
-    <template #content>
-        <p>Набор скинов из манги и аниме <span class="red shadow bold">БЕРСЕРК</span></p>
-        <p>В наборе:</p>
-        <ul>
-            <li>Сет брони Берсерка</li>
-            <li>Скин на меч "Убийца Драконов"</li>
-            <li>3 тотема Бехелит</li>
-        </ul>
-    </template>
-</Card>
-
-</CardGrid>
-
-<CardGrid>
-
-<Card style="width: 25rem; overflow: hidden" class="m-0">
-    <template #header>
-        <Image alt="user header" src="/assets/info/donate/neon.webp" preview />
-    </template>
-    <template #title>Набор Неоновое Творение</template>
-    <template #content>
-        <p>Набор анимированных инструментов в стилистике Киберпанк!</p>
-        <p>В наборе:</p>
-        <ul>
-            <li>8 Свитков Обликов для инструментов, удочки, щита, лука и шлема!</li>
-        </ul>
-    </template>
-</Card>
-
-<Card style="width: 25rem; overflow: hidden" class="m-0">
-    <template #header>
-        <Image alt="user header" src="/assets/info/donate/cherry.webp" preview />
-    </template>
-    <template #title>Набор Цветущая Вишня</template>
-    <template #content>
-        <p>Набор инструментов, созданных из стали, выкопанной из под цветущей сакуры...</p>
-        <p>В наборе:</p>
-        <ul>
-            <li>5 Свитков Обликов для инструментов</li>
-        </ul>
-    </template>
-</Card>
-
-<Card style="width: 25rem; overflow: hidden" class="m-0">
-    <template #header>
-        <Image alt="user header" src="/assets/info/donate/steampunk.webp" preview />
-    </template>
-    <template #title>Набор Стимпанковское Безумие</template>
-    <template #content>
-        <p>Набор настоящих работяг в стиле Стимпанк! Набор полностью анимирован!</p>
-        <p>В наборе:</p>
-        <ul>
-            <li>6 Свитков Обликов для инструментов и удочки</li>
-        </ul>
-    </template>
-</Card>
-
-</CardGrid>
+::: tip Скоро!
+Наборы обликов для нового сезона ещё готовятся. Как только они появятся - мы напишем об этом в [Дискорде](https://discord.gg/6f3FwFRJWC) и обновим эту страницу.
+:::
