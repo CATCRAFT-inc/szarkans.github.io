@@ -49,7 +49,7 @@ aside: false
 <Image src="/assets/info/map/spawn_beacon.webp" alt="" width="80%" preview />
 
 ==Торговая зона
-Здесь можно построить свой магазин. **Главное обсуди это с [Парламентом](../gameplay/roleplay/goverment.md)!**
+Здесь можно построить свой магазин. **Главное обсуди это с Парламентом!**
 
 <Image src="/assets/info/map/spawn_trade.webp" alt="" width="80%" preview />
 

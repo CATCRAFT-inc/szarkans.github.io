@@ -49,6 +49,7 @@ const mechanicsSidebar = [
     text: 'Роллплей',
     items: [
       // { text: 'Правительство', link: '/gameplay/roleplay/goverment.md' }, - скрыто
+      // { text: 'Работа КСБ', link: '/gameplay/roleplay/police.md' }, - скрыто
       { text: 'РП роли', link: '/gameplay/roleplay/other_roles.md' },
     ]
   },
@@ -171,7 +172,17 @@ export default defineConfig({
   // Служебные .md вне вики: план-доки задач, README, файлы Claude Code.
   // Без этого VitePress собирает их как страницы сайта, и docs:build краснеет
   // на ссылках внутри рабочих заметок.
-  srcExclude: ['docs/**', 'README.md', 'CLAUDE.md', 'CLAUDE.local.md', 'vibecode/**'],
+  srcExclude: [
+    'docs/**', 'README.md', 'CLAUDE.md', 'CLAUDE.local.md', 'vibecode/**',
+
+    // Скрытые страницы: файлы остаются в репозитории, но сайт их не собирает -
+    // по прямой ссылке их тоже не открыть. Вернуть = убрать строку отсюда.
+    'gameplay/roleplay/goverment.md',   // структура власти пересобирается
+    'gameplay/roleplay/police.md',      // КСБ распущен
+    'guides/work/gksb.md',              // КСБ распущен
+    'guides/work/police.md',            // КСБ распущен
+    'guides/tech/skins_tlauncher.md',   // сервер теперь лицензионный
+  ],
 
   transformHead: ({ pageData }) => {
     const head = [

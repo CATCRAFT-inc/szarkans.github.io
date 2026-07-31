@@ -2,13 +2,6 @@
 aside: false
 ---
 
-# Страница скрыта
-
-::: tip Раздел скрыт
-Сервер теперь лицензионный, инструкция больше не нужна.
-:::
-
-<!--
 # Пофиксить скины на TLauncher
 
 ::: tip Совет
@@ -30,4 +23,3 @@ aside: false
     ![tlauskins](/assets/guides/tlauncher_skins.webp){ width=600 }
 
 3. Всё!
--->
