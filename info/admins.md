@@ -99,3 +99,13 @@ aside: false
     <template #title>EHqador</template>
 </Card>
 </CardGrid> -->
+
+<!-- Скрыто: cantcaaat
+<Card style="width: 25rem; overflow: hidden" class="m-0">
+    <template #header>
+        <img alt="user header" src="https://vzge.me/face/512/cantcaaat?y=-40" />
+    </template>
+    <template #title>Тех. админ и лоровед cantcaaat</template>
+    <template #subtitle>бурен. тима. конь.</template>
+</Card>
+-->

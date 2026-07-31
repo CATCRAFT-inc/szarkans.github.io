@@ -90,3 +90,27 @@ aside: false
     <template #subtitle>ShirooQWT</template>
 </Card>
 </CardGrid>
+
+<!-- Скрыто: старые иконки-лапки
+<CardGrid>
+<Card style="overflow: hidden;" class="m-0">
+    <template #header>
+        <Image alt="user header" src="/assets/info/brandbook/icon.webp" preview />
+    </template>
+</Card>
+<Card style="overflow: hidden;" class="m-0">
+    <template #header>
+        <Image alt="user header" src="/assets/info/brandbook/icon_purple.webp" preview />
+    </template>
+</Card>
+</CardGrid>
+-->
+
+<!-- Скрыто: скин cantcaaat
+<Card style="overflow: hidden;" class="m-0">
+    <template #header>
+        <Image alt="user header" src="https://mineskin.eu/skin/cantcaaat" preview />
+    </template>
+    <template #subtitle>cantcaaat</template>
+</Card>
+-->

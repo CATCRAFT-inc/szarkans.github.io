@@ -36,6 +36,7 @@ const startPlayingSidebar = [
       { text: 'Фермы, ядро сервера', link: '/info/farm.md' },
       { text: 'Как скачивать моды?', link: '/guides/tech/mod_download.md' },
       { text: 'Ошибки с модами на Fabric', link: '/guides/tech/mod_errors.md' },
+      // { text: 'Фикс скинов на ТЛаунчере', link: '/guides/tech/skins_tlauncher.md' }, - скрыто
       { text: 'Какой лаунчер выбрать?', link: '/guides/other/launcher.md' },
       { text: 'Как редактировать Вики?', link: '/guides/other/edit_wiki.md' }
     ]
@@ -47,7 +48,7 @@ const mechanicsSidebar = [
   {
     text: 'Роллплей',
     items: [
-      { text: 'Правительство', link: '/gameplay/roleplay/goverment.md' },
+      // { text: 'Правительство', link: '/gameplay/roleplay/goverment.md' }, - скрыто
       { text: 'РП роли', link: '/gameplay/roleplay/other_roles.md' },
     ]
   },
