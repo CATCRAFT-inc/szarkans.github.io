@@ -56,16 +56,24 @@
       <div class="result-section">
         <div class="result-slot">
           <div 
-            v-if="result && result.image"
+            v-if="result"
             class="result-wrapper"
             @mouseenter="showTooltip($event, result.name, 'result', 'result')"
             @mouseleave="hideTooltip('result')"
           >
             <img 
+              v-if="result.image"
               :src="result.image" 
               :alt="result.name || 'Result'"
               class="item-icon result-icon"
             />
+
+            <span
+              v-else
+              class="result-placeholder"
+              role="img"
+              :aria-label="result.name"
+            >?</span>
             
             <!-- Количество результата (если указано) -->
             <span v-if="result.count && result.count > 1" class="item-count">
@@ -95,21 +103,22 @@ import { ref, computed, reactive } from 'vue'
 
 // Пропсы компонента
 const props = defineProps({
-  // Матрица ингредиентов 3x3 (массив из 3 массивов по 3 элемента)
+  // Матрица ингредиентов от 1x1 до 3x3
   ingredients: {
     type: Array,
     required: true,
     validator: (value) => {
-      // Проверяем что это матрица 3x3
-      return value.length === 3 && 
-             value.every(row => Array.isArray(row) && row.length === 3)
+      return Array.isArray(value) &&
+             value.length >= 1 &&
+             value.length <= 3 &&
+             value.every(row => Array.isArray(row) && row.length >= 1 && row.length <= 3)
     }
   },
   // Объект результата крафта
   result: {
     type: Object,
     required: true,
-    validator: (value) => value.image && value.name
+    validator: (value) => Boolean(value && value.name)
   }
 })
 
@@ -119,8 +128,9 @@ const tooltipStyles = reactive({})
 
 // Преобразование матрицы ингредиентов для удобства работы
 const ingredientsMatrix = computed(() => {
-  return props.ingredients.map(row => {
-    return row.map(item => {
+  return Array.from({ length: 3 }, (_, rowIndex) => {
+    return Array.from({ length: 3 }, (_, colIndex) => {
+      const item = props.ingredients[rowIndex]?.[colIndex]
       if (!item) return null
       // Нормализация данных ингредиента
       if (typeof item === 'string') {
@@ -313,15 +323,22 @@ const hideTooltip = (key) => {
   width: 44px;
   height: 44px;
   object-fit: contain;
-  image-rendering: pixelated;
-  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
+  image-rendering: pixelated;
 }
 
 /* Иконка результата чуть больше */
 .result-icon {
   width: 52px;
   height: 52px;
+}
+
+.result-placeholder {
+  color: #FFFFFF;
+  font-size: 32px;
+  line-height: 1;
+  text-shadow: 2px 2px 0 #3F3F3F;
 }
 
 /* Количество предметов на иконке */

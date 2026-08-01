@@ -106,45 +106,40 @@ const bestiarySidebar = [
     items: [
       { text: 'Жители Столицы', link: '/bestiary/mobs/npc.md' },
       { text: 'Зачарования', link: '/bestiary/enchantments.md' },
-      
+
     ]
 
   },
   {
-    text: 'Предметы',
+    text: 'Инструменты',
     items: [
-      { text: 'Котик+', link: '/bestiary/usable/kplus.md' },
-      { text: 'Модуль CatTrack', link: '/bestiary/usable/cattrack.md' },
-      { text: 'Свиток облика', link: '/bestiary/usable/scroll.md' },
-      { text: 'UltraDragonblood', link: '/bestiary/usable/ultradragonblood.md' },
-      { text: 'Пустотное зелье', link: '/bestiary/usable/void_potion.md' },
       { text: 'Крюк-кошка', link: '/bestiary/custom_items/grappling_hook.md' },
       { text: 'Эхо-колокол', link: '/bestiary/custom_items/echo_bell.md' },
-      { text: 'Малярная кисть', link: '/bestiary/custom_items/paint_brush.md' },
-      { text: 'Детектор аномальной активности', link: '/bestiary/custom_items/anomaly_detector.md' },
-      { text: 'Рация', link: '/bestiary/custom_items/transmitter.md' },
-      { text: 'Старый автомат', link: '/bestiary/custom_items/kalak.md' },
-      { text: 'Котопедии', link: '/bestiary/custom_items/cotopedia.md' },
-      { text: 'Плюшевые игрушки', link: '/bestiary/custom_items/plushie.md' },
-      { text: 'Котомат', link: '/bestiary/custom_items/kotomat.md' },
-      { text: 'Священные писания', link: '/bestiary/custom_items/holy_books.md' },
+      { text: 'Кувалда', link: '/bestiary/custom_items/hammer.md' },
+      { text: 'Кузнечная кувалда', link: '/bestiary/custom_items/smithing_hammer.md' },
+      { text: 'Пылесос', link: '/bestiary/custom_items/hoover.md' },
+      { text: 'Киянка', link: '/bestiary/custom_items/mallet.md' },
+      { text: 'Фотоаппарат', link: '/bestiary/custom_items/camera.md' },
+      { text: 'Принадлежности для рисования', link: '/bestiary/custom_items/painting_tools.md' },
+    ]
+  },
+  {
+    text: 'Предметы',
+    items: [
+      { text: 'Стеклянный меч', link: '/bestiary/custom_items/glass_sword.md' },
       { text: 'Тренировочный манекен', link: '/bestiary/custom_items/dummy.md' },
-      { text: 'Игральные карты', link: '/bestiary/custom_items/cards.md' },
-      { text: 'Игральные кости', link: '/bestiary/custom_items/dice.md' },
-      { text: 'Драконья Чешуя', link: '/bestiary/materials/dragon_scale.md' },
+      { text: 'Петарды', link: '/bestiary/custom_items/firecrackers.md' },
+      { text: 'Кошелёк', link: '/bestiary/custom_items/wallet.md' },
+      { text: 'Почта', link: '/bestiary/usable/mail.md' },
+      { text: 'Руны обликов', link: '/bestiary/usable/runes.md' },
+      { text: 'Награды строителям', link: '/bestiary/usable/awards.md' },
+      { text: 'Говно', link: '/bestiary/materials/poop.md' },
     ]
   },
   {
     text: 'Блоки',
     items: [
-      { text: 'Блок Гычи', link: '/bestiary/blocks/gycha.md' },
-      { text: 'Сжатые блоки', link: '/bestiary/blocks/compressed.md' },
       { text: 'Укреплённый глубинный сланец', link: '/bestiary/blocks/reinforced_deepslate.md' },
-      { text: 'Блок света', link: '/bestiary/blocks/light.md' },
-      { text: 'Невидимые рамки', link: '/bestiary/blocks/invis_frame.md' },
-      { text: 'Стол декора', link: '/bestiary/blocks/decor_table.md' },
-      { text: 'Шкафы и ящики', link: '/bestiary/blocks/cabinets.md' },
-      { text: 'Шахматы', link: '/bestiary/blocks/chess.md' },
     ]
   }
 ];

@@ -10,7 +10,7 @@ aside: false
 
 ## Список всех рецептов
 
-Список всех рецептов можно узнать в [Алкопедии](/bestiary/custom_items/cotopedia.md). Для её получения обратись к [Бармену](/bestiary/mobs/npc.md)!
+Список рецептов можно узнать у [Бармена](/bestiary/mobs/npc.md)!
 
 ![Алкопедия](/assets/gameplay/brewery/alkopedia.webp)
 

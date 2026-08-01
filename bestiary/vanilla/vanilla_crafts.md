@@ -1,48 +1,96 @@
 # Изменения крафтов
 
-На кошкокрафте добавлены или расширены крафты некоторых ванильных предметов. Это сделано для упрощения в получении или возможности использования контента, раннее недоступного в ванилле.
+Часть ванильных предметов на Кошкокрафте крафтится иначе — обычно чтобы не гонять игрока за редкостью там, где она не нужна.
 
-<div style="overflow: auto;">
+## Бирка
 
-## Чёрный краситель
+Бирку больше не нужно выменивать у библиотекаря: она собирается из **бумаги и одного самородка** — железного, медного или золотого, любого на выбор.
 
-<ItemCard>
-<Card style="overflow: hidden;" class="m-0">
-    <template #header>
-        <Image alt="user header" src="/assets/bestiary/items/black_dye.webp" width="25%"/>
-    </template>
-    <template #title>Чёрный краситель</template>
-</Card>
-</ItemCard>
-
-Предмет, который используются для изменения цвета шерсти, кожаной брони, терракоты и многого другого.
-
-Чёрный, как один из самых популярных цветов, является востребованным, но добывать краситель без сложных ферм - долго. Потому был добавлен крафт из более доступных ресурсов.
-
-![Крафт чёрного красителя на кошкокрафте](/assets/bestiary/crafts/black_dye_craft.gif){width=60%}
-
-</div>
+<CraftingGrid
+  :ingredients="nameTagRecipe"
+  :result="nameTagResult"
+/>
 
 ## Кальцит
 
-<ItemCard>
-<Card style="overflow: hidden;" class="m-0">
-    <template #header>
-        <Image alt="user header" src="/assets/bestiary/items/calcite.webp" width="25%"/>
-    </template>
-    <template #title>Кальцит</template>
-</Card>
-</ItemCard>
+Красивый белый блок, которого на текущей генерации досадно мало. Собирается из **двух костей и двух кусочков кварца** крест-накрест, на выходе — два блока.
 
-Ванильный блок, генерирующийся в аметистовых жеодах и горах.
+<CraftingGrid
+  :ingredients="calciteRecipe"
+  :result="calciteResult"
+/>
 
-По причине относительной редкости на текущей генерации, и большой востребованности в строительстве, был добавлен его крафт.
+## Колокол
 
-### Крафт
+Больше не нужно искать деревню, чтобы забрать один-единственный колокол.
 
-- 2 Костных блока 
+<CraftingGrid
+  :ingredients="bellRecipe"
+  :result="bellResult"
+/>
 
-- 2 Кварцевых блока
+## Мешок
 
-![Крафт кальцита](/assets/bestiary/crafts/calcite_craft.webp){ width=400 loading="lazy" decoding="async" }
+Мешок собирается из **кроличьих шкурок и нити** — без охоты на лам и торговли.
 
+<CraftingGrid
+  :ingredients="bundleRecipe"
+  :result="bundleResult"
+/>
+
+## Снежный блок
+
+Достаточно **двух снежков** вместо четырёх. Ванильный рецепт из четырёх при этом убран.
+
+<CraftingGrid
+  :ingredients="snowRecipe"
+  :result="snowResult"
+/>
+
+## Красители
+
+Красители получить проще, чем в ванилле:
+
+| Краситель | Из чего |
+| --------- | ------- |
+| **Чёрный** | уголь, древесный уголь, чернильный мешок или роза иссушения |
+| **Коричневый** | какао-бобы, либо красный + зелёный краситель |
+| **Зелёный** | синий + жёлтый краситель, либо папоротник в печи |
+
+<script setup>
+
+const paper = { image: "https://minecraft.wiki/images/Paper_JE2_BE2.png?9c3be", name: "Бумага", link: "https://ru.minecraft.wiki/w/Бумага" }
+const ironNugget = { image: "https://minecraft.wiki/images/Invicon_Iron_Nugget.png", name: "Железный самородок (или медный, или золотой)", link: "https://ru.minecraft.wiki/w/Железный_самородок" }
+const bone = { image: "https://minecraft.wiki/images/Invicon_Bone.png?d8310", name: "Кость", link: "https://ru.minecraft.wiki/w/Кость" }
+const quartz = { image: "https://minecraft.wiki/images/Invicon_Nether_Quartz.png", name: "Кварц", link: "https://ru.minecraft.wiki/w/Кварц" }
+const gold = { image: "https://minecraft.wiki/images/Invicon_Gold_Ingot.png", name: "Золотой слиток", link: "https://ru.minecraft.wiki/w/Золотой_слиток" }
+const stick = { image: "https://minecraft.wiki/images/Invicon_Stick.png", name: "Палка", link: "https://ru.minecraft.wiki/w/Палка" }
+const hide = { image: "https://minecraft.wiki/images/Invicon_Rabbit_Hide.png", name: "Кроличья шкурка", link: "https://ru.minecraft.wiki/w/Кроличья_шкурка" }
+const string = { image: "https://minecraft.wiki/images/Invicon_String.png", name: "Нить", link: "https://ru.minecraft.wiki/w/Нить" }
+const snowball = { image: "https://minecraft.wiki/images/Invicon_Snowball.png", name: "Снежок", link: "https://ru.minecraft.wiki/w/Снежок" }
+
+const nameTagRecipe = [[ironNugget, paper]]
+const nameTagResult = { image: "https://minecraft.wiki/images/Invicon_Name_Tag.png", name: "Бирка", count: 1 }
+
+const calciteRecipe = [
+  [bone, quartz],
+  [quartz, bone],
+]
+const calciteResult = { image: "https://minecraft.wiki/images/Invicon_Calcite.png", name: "Кальцит", count: 2 }
+
+const bellRecipe = [
+  [stick, gold, stick],
+  [gold, null, gold],
+]
+const bellResult = { image: "https://minecraft.wiki/images/Invicon_Bell.png?325d0", name: "Колокол", count: 1 }
+
+const bundleRecipe = [
+  [string, hide, string],
+  [hide, null, hide],
+  [hide, hide, hide],
+]
+const bundleResult = { image: "https://minecraft.wiki/images/Invicon_Bundle.png", name: "Мешок", count: 1 }
+
+const snowRecipe = [[snowball, snowball]]
+const snowResult = { image: "https://minecraft.wiki/images/Invicon_Snow_Block.png", name: "Снежный блок", count: 1 }
+</script>

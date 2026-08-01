@@ -26,11 +26,40 @@ aside: false
 
 Если манекен каким-то образом умрёт... Он всё равно выпадет в виде предмета.
 
-## Крафт
+### Крафт
 
 Чтобы заспавнить манекен, нужно нажать `ПКМ` по земле, держа его в руках. А чтобы сломать - `Shift ` + `ПКМ` по нему-же.
 
-![Крафт манекена](/assets/bestiary/crafts/dummy_craft.webp){ width=400 }
+<CraftingGrid
+  :ingredients="dummyRecipe"
+  :result="dummyResult"
+/>
+
+<script setup>
+
+const hay = {
+  image: "https://minecraft.wiki/images/Invicon_Hay_Bale.png",
+  name: "Сноп сена",
+  link: "https://ru.minecraft.wiki/w/Сноп_сена"
+}
+const stick = {
+  image: "https://minecraft.wiki/images/Invicon_Stick.png",
+  name: "Палка",
+  link: "https://ru.minecraft.wiki/w/Палка"
+}
+
+const dummyRecipe = [
+  [hay],
+  [hay],
+  [stick],
+]
+
+const dummyResult = {
+  image: '/assets/crafts/dummy.webp',
+  name: 'Тренировочный манекен',
+  count: 1
+}
+</script>
 
 ## Демонстрация
 
