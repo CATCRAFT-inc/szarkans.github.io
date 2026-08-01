@@ -181,23 +181,14 @@ export default defineConfig({
     'guides/work/police.md',            // КСБ распущен
     'guides/tech/skins_tlauncher.md',   // сервер теперь лицензионный
 
-    // Механики и Бестиарий целиком - в процессе переписывания.
-    // Открытыми остаются только заглушки gameplay/main.md и bestiary/main.md.
-    'gameplay/roleplay/**',
-    'gameplay/unique/**',
-    'bestiary/blocks/**',
-    'bestiary/custom_items/**',
-    'bestiary/materials/**',
-    'bestiary/mobs/**',
-    'bestiary/usable/**',
-    'bestiary/vanilla/**',
-    'bestiary/enchantments.md',
+    'gameplay/roleplay/goverment.md',   // КСБ распущен
+    'gameplay/roleplay/police.md',      // КСБ распущен
+    'gameplay/main.md',                 // заглушка на время скрытия раздела
     'bestiary/test.md',
   ],
 
-  // Пока разделы скрыты, ссылки на них из истории, патчноутов и других
-  // страниц ведут в никуда. Не вычищаем их: разделы вернутся, ссылки оживут.
-  ignoreDeadLinks: [/gameplay\//, /bestiary\//],
+  // Ссылки на две скрытые страницы КСБ остались в истории и патчноутах.
+  ignoreDeadLinks: [/gameplay\/roleplay\/(goverment|police)/],
 
   transformHead: ({ pageData }) => {
     const head = [
@@ -450,7 +441,7 @@ export default defineConfig({
     langMenuLabel: 'Изменить язык',
     nav: [
       { text: 'Начать играть', link: '/info/faq' },
-      { text: 'Механики', link: '/gameplay/main.md' },
+      { text: 'Механики', link: '/gameplay/unique/qol/small_features' },
       { text: 'Бестиарий', link: '/bestiary/main.md' },
       { text: 'История', link: '/history/1season/1season.md' },
       { text: 'Обновления', link: '/updates/7season/7_0_4.md' }
@@ -699,8 +690,8 @@ export default defineConfig({
       ],
       '/info/': startPlayingSidebar,
       '/guides/': startPlayingSidebar,
-      // '/gameplay/': mechanicsSidebar,   - раздел скрыт
-      // '/bestiary': bestiarySidebar,     - раздел скрыт
+      '/gameplay/': mechanicsSidebar,
+      '/bestiary': bestiarySidebar,
       '/history/': [
         {
           text: '1 сезон',
