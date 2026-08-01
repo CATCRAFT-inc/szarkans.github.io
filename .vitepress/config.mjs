@@ -120,7 +120,7 @@ const bestiarySidebar = [
       { text: 'Пылесос', link: '/bestiary/custom_items/hoover.md' },
       { text: 'Киянка', link: '/bestiary/custom_items/mallet.md' },
       { text: 'Фотоаппарат', link: '/bestiary/custom_items/camera.md' },
-      { text: 'Принадлежности для рисования', link: '/bestiary/custom_items/painting_tools.md' },
+      { text: 'Рисование', link: '/bestiary/custom_items/painting_tools.md' },
     ]
   },
   {

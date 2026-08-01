@@ -4,7 +4,7 @@ aside: false
 
 # Петарды
 
-Шумят, пугают и ничего не ломают. Кидаются с руки, взрываются на месте падения.
+Шумят, пугают и *наверное* ничего не ломают.
 
 ## Петарда «Мелочь»
 
@@ -25,8 +25,6 @@ aside: false
     </template>
 </Card>
 </ItemCard>
-
-Неотъемлемый атрибут уличной шпаны. Хлопает звонко, но безобидно.
 
 <CraftingGrid
   :ingredients="smallRecipe"
@@ -53,8 +51,6 @@ aside: false
 </Card>
 </ItemCard>
 
-От настоящего динамита её отличает только отсутствие последствий. Грохот — как у полноценного взрыва.
-
 <CraftingGrid
   :ingredients="bigRecipe"
   :result="bigResult"
@@ -78,9 +74,7 @@ aside: false
       <p>Текстура: sm1lly</p>
     </template>
 </Card>
-</ItemCard>
-
-Те самые китайские петарды-погремушки: одна связка трещит несколько раз подряд.
+</ItemCard>.
 
 <CraftingGrid
   :ingredients="bunchRecipe"
