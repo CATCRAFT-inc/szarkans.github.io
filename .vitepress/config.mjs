@@ -45,22 +45,15 @@ const startPlayingSidebar = [
 
 const mechanicsSidebar = [
   // ── КАК ИГРАТЬ ───────────────────────────────────────
-  {
-    text: 'Роллплей',
-    items: [
-      // { text: 'Правительство', link: '/gameplay/roleplay/goverment.md' }, - скрыто
-      // { text: 'Работа КСБ', link: '/gameplay/roleplay/police.md' }, - скрыто
-      { text: 'РП роли', link: '/gameplay/roleplay/other_roles.md' },
-    ]
-  },
+  // Группа «Роллплей» снята целиком: КСБ распущен, страница РП ролей удалена.
   {
     text: 'Общие механики',
     items: [
       { text: 'Команды', link: '/gameplay/unique/commands.md' },
-      { text: 'Профиль игрока', link: '/gameplay/unique/qol/profile.md' },
-      { text: 'Награды игрокам', link: '/gameplay/unique/qol/rewards.md' },
-      { text: 'Котячьи заслуги', link: '/gameplay/unique/qol/catpass.md' },
-      { text: 'Подключение к Дискорду', link: '/gameplay/unique/qol/discord_link.md' },
+      // { text: 'Профиль игрока', link: '/gameplay/unique/qol/profile.md' },
+      { text: 'Достижения сообщества', link: '/gameplay/unique/qol/rewards.md' },
+      { text: 'Почта', link: '/gameplay/unique/mail.md' },
+      // { text: 'Подключение к Дискорду', link: '/gameplay/unique/qol/discord_link.md' }, - скрыто
       { text: 'Маленькие механики', link: '/gameplay/unique/qol/small_features.md' },
     ]
   },
@@ -70,7 +63,7 @@ const mechanicsSidebar = [
       { text: 'Варка напитков', link: '/gameplay/unique/brewery.md' },
       { text: 'Рыбалка', link: '/gameplay/unique/fishing.md' },
       { text: 'Рисование', link: '/gameplay/unique/artmap.md' },
-      { text: 'Мебель и декорации', link: '/gameplay/unique/decor.md' },
+      // { text: 'Мебель и декорации', link: '/gameplay/unique/decor.md' }, - скрыто
       { text: 'Реалистичные верёвки', link: '/gameplay/unique/catenary.md' },
     ]
   },
@@ -78,9 +71,9 @@ const mechanicsSidebar = [
     text: 'Прочее',
     items: [
       { text: 'Кланы β', link: '/gameplay/unique/clans.md' },
-      { text: 'Гардеробная обликов', link: '/gameplay/unique/wardrobe.md' },
-      { text: 'Figura', link: '/gameplay/unique/mods/figura.md' },
-      { text: 'Войсчат и диски', link: '/gameplay/unique/mods/voicechat.md' },
+      // { text: 'Гардеробная обликов', link: '/gameplay/unique/wardrobe.md' }, - скрыто
+      // { text: 'Figura', link: '/gameplay/unique/mods/figura.md' }, - скрыто
+      { text: 'Войсчат', link: '/gameplay/unique/mods/voicechat.md' },
     ]
   },
   {
@@ -180,6 +173,12 @@ export default defineConfig({
     'gameplay/roleplay/police.md',      // КСБ распущен
     'gameplay/main.md',                 // заглушка на время скрытия раздела
     'bestiary/test.md',
+
+    // Скрыто при переписывании раздела под новый сервер (01.08.2026):
+    'gameplay/unique/qol/discord_link.md', // /discord link не работает: discord_main.dsc.disabled
+    'gameplay/unique/decor.md',            // ждёт сверки с новым CraftEngine
+    'gameplay/unique/wardrobe.md',         // гардеробная не перенесена на новый сервер
+    'gameplay/unique/mods/figura.md',      // ждёт решения по моду
   ],
 
   // Ссылки на две скрытые страницы КСБ остались в истории и патчноутах.
