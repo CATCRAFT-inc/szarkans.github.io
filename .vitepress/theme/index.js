@@ -44,7 +44,6 @@ import CardGrid from './CardGrid.vue';
 import Spoiler from './Spoiler.vue';
 import ItemCard from './ItemCard.vue';
 import File from './File.vue';
-import ClanLevelCalculator from './ClanLevelCalculator.vue';
 import Neon from './Neon.vue';
 import Reviews from './Reviews.vue';
 import InfoCard from './InfoCard.vue';
@@ -117,7 +116,6 @@ export default {
     app.component('CardGrid', CardGrid);
     app.component('ItemCard', ItemCard);
     app.component('File', File);
-    app.component('ClanLevelCalculator', ClanLevelCalculator);
     app.component('Neon', Neon);
     app.component('Reviews', Reviews);
     app.component('InfoCard', InfoCard);

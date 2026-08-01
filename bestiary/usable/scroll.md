@@ -14,7 +14,7 @@ aside: false
       <Divider />
       <h3>Получение:</h3>
       <ul>
-      <li>Покупка у <a href="/gameplay/unique/wardrobe">Аркадия Гусева</a></li>
+      <li>Покупка у Аркадия Гусева</li>
       <li>Донатик</li>
       </ul>
       <Divider />
