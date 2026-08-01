@@ -50,8 +50,8 @@ const mechanicsSidebar = [
     text: 'Общие механики',
     items: [
       { text: 'Команды', link: '/gameplay/unique/commands.md' },
-      { text: 'Профиль игрока', link: '/gameplay/unique/qol/profile.md' },
-      { text: 'Награды игрокам', link: '/gameplay/unique/qol/rewards.md' },
+      // { text: 'Профиль игрока', link: '/gameplay/unique/qol/profile.md' },
+      { text: 'Достижения сообщества', link: '/gameplay/unique/qol/rewards.md' },
       { text: 'Почта', link: '/gameplay/unique/mail.md' },
       // { text: 'Подключение к Дискорду', link: '/gameplay/unique/qol/discord_link.md' }, - скрыто
       { text: 'Маленькие механики', link: '/gameplay/unique/qol/small_features.md' },
