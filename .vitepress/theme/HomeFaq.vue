@@ -15,8 +15,10 @@
         <!-- Высота раскрытия — grid 0fr→1fr: ответ любой длины виден целиком,
              без замера в JS и без обрезки на фиксированных 200px. -->
         <div class="dropdown-content">
-          <!-- Используем v-html для вывода HTML-содержимого -->
-          <p v-html="item.content"></p>
+          <div class="dropdown-clip">
+            <!-- Используем v-html для вывода HTML-содержимого -->
+            <p v-html="item.content"></p>
+          </div>
         </div>
       </div>
     </div>
@@ -196,9 +198,15 @@ function toggle(index) {
   grid-template-rows: 1fr;
 }
 
-.dropdown-content p {
+/* Обрезку держит отдельная обёртка — грид-элемент. Вешать overflow прямо
+   на <p> нельзя: у него свои отступы, и в свёрнутом состоянии текст
+   вылезал из карточки. */
+.dropdown-clip {
   min-height: 0;
   overflow: hidden;
+}
+
+.dropdown-content p {
   padding: 0 20px 18px 20px;
   margin: 0;
   color: #a8a8b8;

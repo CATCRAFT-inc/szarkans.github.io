@@ -212,6 +212,16 @@ h3 {
 
 
 
+/* Несколько сеток крафта в один ряд: обернуть <CraftingGrid> в
+   <div class="crafting-row">. Сами сетки — блочные, поэтому по умолчанию
+   встают друг под другом. Когда в строку не помещаются — переносятся. */
+.crafting-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 24px;
+}
+
 /* Разное */
 
 .noselect {

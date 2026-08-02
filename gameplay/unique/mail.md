@@ -13,6 +13,8 @@ description: Как работает почта на Кошкокрафте - я
 
 Создай себе почтовый ящик, чтобы начать получать письма! Они бывают двух видов, различаются лишь вместимостью:
 
+<div class="crafting-row">
+
 <CraftingGrid
   :ingredients="mailboxRecipe"
   :result="mailboxResult"
@@ -22,6 +24,8 @@ description: Как работает почта на Кошкокрафте - я
   :ingredients="smallMailboxRecipe"
   :result="smallMailboxResult"
 />
+
+</div>
 
 ::: danger Но!
 Ящик защищён от чужих рук, но не от чужой кирки. Сломают — **адрес пропадёт из почтовой системы**, а всё содержимое вывалится на землю рядом с блоком.

@@ -10,11 +10,13 @@
 
 <style>
 .card-grid {
-  /* auto-fit + minmax: карточки сами переносятся и на узком экране встают
-     в один столбец. Прежний flex без wrap сжимал их в нечитаемые полоски. */
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  display: flex;
+  /* flex-wrap: на узком экране карточки переносятся, а не сжимаются
+     в нечитаемые полоски. Ширину задаёт содержимое карточки — гридом
+     с колонками фиксированной доли картинки растягивало на всю колонку. */
+  flex-wrap: wrap;
   gap: 0.5em;
+  justify-content: center;
   align-items: stretch; /* Растягивает элементы по высоте */
   margin-top: 24px;
   margin-bottom: 24px;
