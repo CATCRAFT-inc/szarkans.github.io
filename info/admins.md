@@ -46,7 +46,7 @@ aside: false
 <CardGrid>
 <Card style="width: 25rem; overflow: hidden" class="m-0">
     <template #header>
-        <img alt="user header" src="https://vzge.me/face/512/Cr1stal?y=-40" />
+        <img alt="user header" src="https://vzge.me/face/512/cristalYAQ?y=-40" />
     </template>
     <template #title>cristalYAQ</template>
 </Card>
@@ -58,7 +58,7 @@ aside: false
 </Card>
 <Card style="width: 25rem; overflow: hidden" class="m-0">
     <template #header>
-        <img alt="user header" src="https://vzge.me/face/512/ralsk0l?y=-40" />
+        <img alt="user header" src="https://vzge.me/face/512/raskolfo?y=-40" />
     </template>
     <template #title>raskolfo</template>
 </Card>
@@ -88,24 +88,3 @@ aside: false
         <template #subtitle>это моя жена.</template>
     </Card>
 </CardGrid>
-
-<!-- нащёт него посмотрим -->
-
-<!-- <CardGrid>
-<Card style="width: 25rem; overflow: hidden" class="m-0">
-    <template #header>
-        <img alt="user header" src="https://vzge.me/face/512/EHqador?y=-40" />
-    </template>
-    <template #title>EHqador</template>
-</Card>
-</CardGrid> -->
-
-<!-- Скрыто: cantcaaat
-<Card style="width: 25rem; overflow: hidden" class="m-0">
-    <template #header>
-        <img alt="user header" src="https://vzge.me/face/512/cantcaaat?y=-40" />
-    </template>
-    <template #title>Тех. админ и лоровед cantcaaat</template>
-    <template #subtitle>бурен. тима. конь.</template>
-</Card>
--->
