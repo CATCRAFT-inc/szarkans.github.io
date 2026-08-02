@@ -1,66 +1,17 @@
 ---
-status: new
 toc_depth: 1
-hide:
-  - toc
 ---
 
 # Изменения механик
 
-Механики некоторых предметов были изменены на Кошкокрафте, для **упрощения** или **усложнения** геймплея.
+Часть ванильных механик на Кошкокрафте работает не так, как ты привык.
 
-## Кристаллы Энда и Якори возрождения
+## Парирование
 
-<ItemCard>
-<Card style="overflow: hidden;" class="m-0">
-    <template #header>
-        <Image alt="user header" src="/assets/bestiary/items/end_crystal.webp" width="35%"/>
-        <Image alt="user header" src="/assets/bestiary/items/respawn_anchor.webp" width="35%"/>
-    </template>
-</Card>
-</ItemCard>
+Если поднять щит **ровно в момент удара**, а не заранее, атака парируется полностью:
 
-Ни то и ни другое нельзя **взрывать** в **Обычном мире** - оно просто будет выпадать или не взрываться.
-<br><br><br><br><br>
+- урон не проходит вообще;
+- атакующего отбрасывает назад;
+- после парирования щит уходит на перезарядку в 5 секунд.
 
-## Тотем Бессмертия
-
-<ItemCard>
-<Card style="overflow: hidden;" class="m-0">
-    <template #header>
-        <Image alt="user header" src="/assets/bestiary/items/totem.webp" width="35%"/>
-    </template>
-</Card>
-</ItemCard>
-
-У Тотемов теперь **1 минута КД** на использование. Это означает, что тотем не работает в течении минуты после использования.
-
-Также шанс выпадения Тотема с Призывателя снижен до **5%**.
-
-## Инструменты
-
-<ItemCard>
-<Card style="overflow: hidden;" class="m-0">
-    <template #header>
-        <Image alt="user header" src="/assets/bestiary/items/pickaxe_and_hoe.webp" width="40%"/>
-    </template>
-</Card>
-</ItemCard>
-
-Кирки быстро ломают **стекло** и **светокамень**.
-
-Мотыги быстро ломают **жабосветы**.
-<br><br>
-
-## Вырезанная тыква
-
-<ItemCard>
-<Card style="overflow: hidden;" class="m-0">
-    <template #header>
-        <Image alt="user header" src="/assets/bestiary/block/carved_pumpkin.webp" width="35%"/>
-    </template>
-</Card>
-</ItemCard>
-
-Вырезанные тыквы можно зачаровывать как и обычные шлема!
-<br><br><br><br><br>
+Окно узкое — примерно четверть секунды, и работает только если враг перед вами. Просто держать щит поднятым, как раньше, тоже можно, но это уже обычная блокировка.

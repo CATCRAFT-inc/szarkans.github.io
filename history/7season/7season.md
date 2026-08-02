@@ -197,7 +197,7 @@
 
 ### Топы CatTrack
 
-*Записи с предмета [CatTrack](/bestiary/usable/cattrack.md)!*
+*Записи с предмета CatTrack!*
 
 Убийства мобов: **l_vitek_l** с **122.723** убийствами!
 

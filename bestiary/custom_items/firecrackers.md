@@ -2,14 +2,18 @@
 aside: false
 ---
 
-# Петарды и хлопушки
+# Петарды
+
+Шумят, пугают и *наверное* ничего не ломают.
+
+## Петарда «Мелочь»
 
 <ItemCard>
 <Card style="overflow: hidden;" class="m-0">
     <template #header>
-        <Image alt="user header" src="/assets/bestiary/items/firecrackers/firecracker_small.webp" width="40%"/>
+        <Image alt="Петарда Мелочь" src="/assets/crafts/petard_small.webp" width="40%"/>
     </template>
-    <template #title>Петарда "Хлопушка"</template>
+    <template #title>Петарда «Мелочь»</template>
     <template #content>
       <Divider />
       <h3>Получение:</h3>
@@ -22,20 +26,19 @@ aside: false
 </Card>
 </ItemCard>
 
-Неотъемлемый аттрибут уличной шпаны
+<CraftingGrid
+  :ingredients="smallRecipe"
+  :result="smallResult"
+/>
 
-![Крафт маленькой петарды](/assets/bestiary/items/firecrackers/firecracker_small_craft.webp){width=40%}
-
-<br><br><br><br><br><br><br><br><br><br>
-
-***
+## Петарда «П*здец»
 
 <ItemCard>
 <Card style="overflow: hidden;" class="m-0">
     <template #header>
-        <Image alt="user header" src="/assets/bestiary/items/firecrackers/firecracker_medium.webp" width="40%"/>
+        <Image alt="Большая петарда" src="/assets/crafts/petard_big.webp" width="40%"/>
     </template>
-    <template #title>Петарда "Кирдык"</template>
+    <template #title>Петарда «П*здец»</template>
     <template #content>
       <Divider />
       <h3>Получение:</h3>
@@ -48,20 +51,19 @@ aside: false
 </Card>
 </ItemCard>
 
-Хлопает громче - значит круче
+<CraftingGrid
+  :ingredients="bigRecipe"
+  :result="bigResult"
+/>
 
-![Крафт средней петарды](/assets/bestiary/items/firecrackers/firecracker_medium_craft.webp){width=40%}
-
-<br><br><br><br><br><br><br><br><br><br>
-
-***
+## Связка петард «Стая котят»
 
 <ItemCard>
 <Card style="overflow: hidden;" class="m-0">
     <template #header>
-        <Image alt="user header" src="/assets/bestiary/items/firecrackers/firecracker_bunch.webp" width="40%"/>
+        <Image alt="Связка петард" src="/assets/crafts/petard_bunch.webp" width="40%"/>
     </template>
-    <template #title>Петарда "Стая котят"</template>
+    <template #title>Связка петард «Стая котят»</template>
     <template #content>
       <Divider />
       <h3>Получение:</h3>
@@ -72,57 +74,58 @@ aside: false
       <p>Текстура: sm1lly</p>
     </template>
 </Card>
-</ItemCard>
+</ItemCard>.
 
-Те самые китайские петарды-погремушки
+<CraftingGrid
+  :ingredients="bunchRecipe"
+  :result="bunchResult"
+/>
 
-![Крафт связки петард](/assets/bestiary/items/firecrackers/firecracker_bunch_craft.webp){width=40%}
+<script setup>
 
-<br><br><br><br><br><br><br><br><br><br>
+const gunpowder = {
+  image: "https://minecraft.wiki/images/Invicon_Gunpowder.png",
+  name: "Порох",
+  link: "https://ru.minecraft.wiki/w/Порох"
+}
+const paper = {
+  image: "https://minecraft.wiki/images/Paper_JE2_BE2.png?9c3be",
+  name: "Бумага",
+  link: "https://ru.minecraft.wiki/w/Бумага"
+}
+const small = {
+  image: "/assets/crafts/petard_small.webp",
+  name: "Петарда «Мелочь»"
+}
 
-***
+const smallRecipe = [
+  [gunpowder, paper],
+  [gunpowder, paper],
+]
+const smallResult = {
+  image: '/assets/crafts/petard_small.webp',
+  name: 'Петарда «Мелочь»',
+  count: 3
+}
 
-<ItemCard>
-<Card style="overflow: hidden;" class="m-0">
-    <template #header>
-        <Image alt="user header" src="/assets/bestiary/items/firecrackers/firecracker_big.webp" width="40%"/>
-    </template>
-    <template #title>Петарда "П*здец"</template>
-    <template #content>
-      <Divider />
-      <h3>Получение:</h3>
-      <ul>
-      <li>Крафт</li>
-      </ul>
-      <Divider />
-      <p>Текстура: sm1lly</p>
-    </template>
-</Card>
-</ItemCard>
+const bigRecipe = [
+  [gunpowder, paper],
+  [gunpowder, paper],
+  [gunpowder, paper],
+]
+const bigResult = {
+  image: '/assets/crafts/petard_big.webp',
+  name: 'Петарда «П*здец»',
+  count: 3
+}
 
-От настоящего динамита её разделяет только название
-
-![Крафт маленькой петарды](/assets/bestiary/items/firecrackers/firecracker_big_craft.webp){width=40%}
-
-<br><br><br><br><br><br><br><br><br><br>
-
-***
-
-<ItemCard>
-<Card style="overflow: hidden;" class="m-0">
-    <template #title>Хлопушка</template>
-    <template #content>
-      <Divider />
-      <h3>Получение:</h3>
-      <ul>
-      <li>Крафт</li>
-      </ul>
-      <Divider />
-      <p>Текстуры нет =(</p>
-    </template>
-</Card>
-</ItemCard>
-
-Хлопушки могут крафтиться из любого красителя, их нужно расположить линией сверху. Главное убери за собой!
-
-![Крафт маленькой петарды](/assets/bestiary/items/firecrackers/hlopushka_craft.webp){width=40%}
+const bunchRecipe = [
+  [small, small],
+  [small, small],
+]
+const bunchResult = {
+  image: '/assets/crafts/petard_bunch.webp',
+  name: 'Связка петард «Стая котят»',
+  count: 1
+}
+</script>
