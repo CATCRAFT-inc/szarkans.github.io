@@ -1,14 +1,7 @@
 <template>
-  <div class="blur-image-container">
-    <img
-      :src="src"
-      :alt="alt"
-      @mouseenter="hovered = true"
-      @mouseleave="hovered = false"
-      @click="hovered = !hovered"
-      :class="{ 'blurred': !hovered }"
-    />
-    <div v-if="!hovered" class="blur-image-overlay">
+  <div class="blur-image-container" :class="{ revealed }" @click="revealed = !revealed">
+    <img :src="src" :alt="alt" />
+    <div class="blur-image-overlay">
       <div class="blur-image-text">
         <div class="nsfw-title">18+</div>
         <div class="nsfw-subtitle">Наведись / нажми, чтобы посмотреть</div>
@@ -25,13 +18,14 @@ defineProps({
   alt: { type: String, required: true },
 });
 
-const hovered = ref(false);
+const revealed = ref(false);
 </script>
 
 <style scoped>
 .blur-image-container {
   position: relative;
   display: inline-block;
+  cursor: pointer;
 }
 
 .blur-image-container img {
@@ -39,10 +33,26 @@ const hovered = ref(false);
   transition: filter 0.3s ease !important;
   width: 100%;
   height: auto;
+  filter: blur(12px);
 }
 
-.blurred {
-  filter: blur(12px);
+/* Раскрытие по клику/тапу — работает везде. Наведение мышью добавляется
+   только там, где указатель действительно есть: на тач-экране браузер
+   эмулирует mouseenter перед click, и JS-обработчик наведения гасил тап. */
+.blur-image-container.revealed img {
+  filter: none;
+}
+.blur-image-container.revealed .blur-image-overlay {
+  opacity: 0;
+}
+
+@media (hover: hover) {
+  .blur-image-container:hover img {
+    filter: none;
+  }
+  .blur-image-container:hover .blur-image-overlay {
+    opacity: 0;
+  }
 }
 
 .blur-image-overlay {
@@ -58,6 +68,7 @@ const hovered = ref(false);
   justify-content: center;
   text-align: center;
   pointer-events: none;
+  transition: opacity 0.3s ease;
 }
 
 .nsfw-title {

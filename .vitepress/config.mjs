@@ -144,7 +144,12 @@ const adhdVideosPlugin = {
   load(id) {
     if (id === '\0virtual:adhd-videos') {
       const videosDir = path.resolve(__dirname, '../public/videos')
-      const files = fs.readdirSync(videosDir).filter(f => f.endsWith('.webm')).sort()
+      // Папки может не быть (свежий клон без 166 МБ видео, частичный чекаут в CI).
+      // AdhdMode.vue уже умеет в пустой список, поэтому деградируем в него,
+      // а не роняем всю сборку на ENOENT при загрузке конфига.
+      const files = fs.existsSync(videosDir)
+        ? fs.readdirSync(videosDir).filter(f => f.endsWith('.webm')).sort()
+        : []
       return `export default ${JSON.stringify(files.map(f => `/videos/${f}`))}`
     }
   }
@@ -180,8 +185,9 @@ export default defineConfig({
     'gameplay/unique/mods/figura.md',      // ждёт решения по моду
   ],
 
-  // Ссылки на две скрытые страницы КСБ остались в истории и патчноутах.
-  ignoreDeadLinks: [/gameplay\/roleplay\/(goverment|police)/],
+  // ignoreDeadLinks намеренно не задан: заглушка под скрытые страницы КСБ
+  // была неякорной подстрокой и глушила бы любую будущую опечатку в этом
+  // разделе. Ссылок на те страницы в тексте не осталось — проверять нечего.
 
   transformHead: ({ pageData }) => {
     const head = [
@@ -206,7 +212,12 @@ export default defineConfig({
 
     const pageTitle = pageData.title || 'Кошкокрафт';
     const pageDescription = pageData.description || pageData.frontmatter?.description || 'Вики самого Кошачьего сервера - Кошкокрафт!';
-    const pageUrl = `${siteUrl}/${pageData.relativePath.replace(/\.md$/, '')}`;
+    // cleanUrls: true отдаёт index.md по адресу каталога, а не по `/index`.
+    // Без срезания `index` каноникал главной указывал на несуществующий URL.
+    const pagePath = pageData.relativePath
+      .replace(/(^|\/)index\.md$/, '$1')
+      .replace(/\.md$/, '');
+    const pageUrl = `${siteUrl}/${pagePath}`;
 
     const fullTitle = pageTitle === 'Кошкокрафт' ? pageTitle : `${pageTitle} | Кошкокрафт`;
 
@@ -303,7 +314,11 @@ export default defineConfig({
   head: [
     ['link', { rel: 'icon', href: '/favicon.png'}],
     ['meta', { name: 'google-site-verification', content: 'r54JPpg5sYhuUs5E00v4XJ-BweKdustH7r9E2w_QpnQ' }],
-    // Google Analytics
+    // ВНИМАНИЕ: на сайте ДВЕ разные Google Analytics — эта (G-ZP5H997C51) и
+    // G-X3KCR2ZW65 через плагин в theme/index.js. Обе пишут в один dataLayer,
+    // цифры в отчётах расходятся. Одну надо убрать; какую — не решено.
+    // Эта считает только первую страницу за визит (вики — SPA, переходы
+    // не перезагружают страницу), плагин считает переходы правильно.
     ['script', { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-ZP5H997C51' }],
     ['script', {}, `window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -590,7 +605,7 @@ export default defineConfig({
                 },
                 {
                   "text": "30.10.2022",
-                  "link": "/updates/archive/29_10_2022.md"
+                  "link": "/updates/archive/30_10_2022.md"
                 },
                 {
                   "text": "04.10.2022",

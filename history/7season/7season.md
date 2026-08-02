@@ -99,7 +99,7 @@
 <br>
 <br>
 
-<Image src="/assets/general/fractal.jpg" />
+<Image src="/assets/general/fractal.webp" />
 
 <div style="text-align: center">
 

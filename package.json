@@ -8,7 +8,9 @@
     "vitepress-plugin-tabs": "^0.7.3"
   },
   "scripts": {
+    "predocs:dev": "node scripts/optimize-images.js",
     "docs:dev": "vitepress dev",
+    "predocs:build": "node scripts/optimize-images.js",
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview",
     "generate-manifest": "node scripts/manifest.js",

@@ -115,7 +115,11 @@ onMounted(async () => {
       signal: controller.signal
     })
     clearTimeout(timeout)
+    if (!res.ok) throw new Error(`mcsrvstat ${res.status}`)
     const data = await res.json()
+    // mcsrvstat отвечает 200 и { online: false } на лежачий сервер —
+    // без этой проверки статус рисуется зелёным с «0 игроков».
+    if (data.online !== true) throw new Error('server offline')
     playerCount.value = data.players?.online ?? 0
     tps.value = parseFloat((18.0 + Math.random() * 1.1).toFixed(1)) // извините, ни один сайт не даёт данные ТПС сервера. но это чистая правда - аптайм 99.8%, тпс в среднем 19.2!!!!
     loaded.value = true

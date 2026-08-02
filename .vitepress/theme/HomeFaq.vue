@@ -8,12 +8,13 @@
   <div class="faq-container">
     <!-- Левая колонка с дропдаунами -->
     <div class="faq-left">
-      <div v-for="(item, index) in faqItems" :key="index" class="dropdown">
-        <button class="dropdown-title" @click="toggle(index)">
+      <div v-for="(item, index) in faqItems" :key="index" class="dropdown" :class="{ open: openStates[index] }">
+        <button class="dropdown-title" @click="toggle(index)" :aria-expanded="openStates[index]">
           {{ item.title }}
         </button>
-        <!-- Убираем v-show и применяем динамический стиль -->
-        <div class="dropdown-content" :style="{ maxHeight: openStates[index] ? '200px' : '0px' }">
+        <!-- Высота раскрытия — grid 0fr→1fr: ответ любой длины виден целиком,
+             без замера в JS и без обрезки на фиксированных 200px. -->
+        <div class="dropdown-content">
           <!-- Используем v-html для вывода HTML-содержимого -->
           <p v-html="item.content"></p>
         </div>
@@ -149,13 +150,13 @@ function toggle(index) {
   border-color: rgba(124, 58, 237, 0.2);
 }
 
-.dropdown:has(.dropdown-content[style*="200px"]) {
+.dropdown.open {
   border-color: rgba(79, 45, 190, 0.5);
   background: rgba(79, 45, 190, 0.07);
   box-shadow: 0 0 16px rgba(79, 45, 190, 0.12);
 }
 
-.dropdown:has(.dropdown-content[style*="200px"]) .dropdown-title {
+.dropdown.open .dropdown-title {
   color: #c8b8ff;
   background-image: url("data:image/svg+xml;utf8,<svg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M1 7L7 1L13 7' stroke='%239b7dff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'></path></svg>");
 }
@@ -184,14 +185,20 @@ function toggle(index) {
   background-color: hsla(var(--md-hue),15%,18%,1);
 }
 
-/* Элемент с контентом дропдауна - переход max-height */
+/* Элемент с контентом дропдауна — анимация по строке грида (0fr → 1fr) */
 .dropdown-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease !important;
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.4s ease !important;
+}
+
+.dropdown.open .dropdown-content {
+  grid-template-rows: 1fr;
 }
 
 .dropdown-content p {
+  min-height: 0;
+  overflow: hidden;
   padding: 0 20px 18px 20px;
   margin: 0;
   color: #a8a8b8;

@@ -38,12 +38,16 @@ onMounted(() => {
 /* Карточка не должна залезать в следующую секцию и на широкие блоки.
    Заголовок следующей секции сам уходит под неё — это снимает нужду
    в <br><br><br> внутри .md. Флексовые блоки (.crafting-container)
-   сами по себе BFC и обтекают карточку корректно, им clear не нужен. */
-.vp-doc h1,
-.vp-doc h2,
-.vp-doc table,
-.vp-doc div[class*='language-'],
-.vp-doc .custom-block {
+   сами по себе BFC и обтекают карточку корректно, им clear не нужен.
+
+   Стиль компонента не scoped и лежит в общем чанке, поэтому правила
+   сужены до страниц, где карточка действительно есть: иначе clear
+   срабатывал бы на всей вики. */
+.vp-doc:has(.item-card) h1,
+.vp-doc:has(.item-card) h2,
+.vp-doc:has(.item-card) table,
+.vp-doc:has(.item-card) div[class*='language-'],
+.vp-doc:has(.item-card) .custom-block {
   clear: both;
 }
 

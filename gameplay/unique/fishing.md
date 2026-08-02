@@ -41,7 +41,7 @@ aside: false
   { src: '/assets/gameplay/unique/fishing/dance.gif', alt: 'Здесь нужно нажимать определенные клавиши' },
   { src: '/assets/gameplay/unique/fishing/hold.gif', alt: 'Здесь нужно удержать рыбку' },
   { src: '/assets/gameplay/unique/fishing/race.gif', alt: 'Здесь нужно довести рыбку до финиша' },
-  { src: '/assets/gameplay/unique/fishing/void_fishing.png', alt: 'Также есть пустотная рыбалка!' }
+  { src: '/assets/gameplay/unique/fishing/void_fishing.webp', alt: 'Также есть пустотная рыбалка!' }
 ]"  :circular="true" :showItemNavigators="true" :showThumbnails="false" :showIndicators="false" :indicatorsPosition="inside">
     <template #item="{ item }">
         <Image :src="item.src" :alt="item.alt" class="galleria-image" />

@@ -200,7 +200,10 @@ h3 {
   }
 }
 
-.VPLocalNav[data-v-da48a524] {
+/* Было `.VPLocalNav[data-v-da48a524]` — хеш scoped-стиля самого VitePress.
+   Он меняется при любом обновлении пакета, и правило молча переставало
+   работать. Двойной класс даёт ту же специфичность без привязки к вендору. */
+.VPLocalNav.VPLocalNav {
   background-color: transparent !important;
   backdrop-filter: blur(8px);
 }

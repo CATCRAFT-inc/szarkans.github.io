@@ -11,19 +11,19 @@ aside: false
 <CardGrid>
 <Card style="overflow: hidden;" class="m-0">
     <template #header>
-        <Image alt="Логотип Кошкокрафта, фиолетовый" src="/assets/info/brandbook/paw_purple.png" preview />
+        <Image alt="Логотип Кошкокрафта, фиолетовый" src="/assets/info/brandbook/paw_purple.webp" preview />
     </template>
     <template #subtitle>Основной, фиолетовый (<a href="/assets/info/brandbook/paw_purple.svg" download>.svg</a>)</template>
 </Card>
 <Card style="overflow: hidden;" class="m-0">
     <template #header>
-        <Image alt="Логотип Кошкокрафта, белый" src="/assets/info/brandbook/paw_white.png" preview />
+        <Image alt="Логотип Кошкокрафта, белый" src="/assets/info/brandbook/paw_white.webp" preview />
     </template>
     <template #subtitle>Белый, для тёмных фонов (<a href="/assets/info/brandbook/paw_white.svg" download>.svg</a>)</template>
 </Card>
 <Card style="overflow: hidden; background: #e9e9ee;" class="m-0">
     <template #header>
-        <Image alt="Логотип Кошкокрафта, чёрный" src="/assets/info/brandbook/paw_black.png" preview />
+        <Image alt="Логотип Кошкокрафта, чёрный" src="/assets/info/brandbook/paw_black.webp" preview />
     </template>
     <template #subtitle>Чёрный, для светлых фонов (<a href="/assets/info/brandbook/paw_black.svg" download>.svg</a>)</template>
 </Card>

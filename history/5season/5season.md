@@ -491,7 +491,7 @@ Papamama: *ответ неизвестен*
 
     - Были удалены, слишком яркие и огромные
 
-    ![Префиксы](/assets/server_history/season5/prefixes.jpg){ decoding="async" loading="lazy" }
+    ![Префиксы](/assets/server_history/season5/prefixes.webp){ decoding="async" loading="lazy" }
 
 ## 1 декабря
 

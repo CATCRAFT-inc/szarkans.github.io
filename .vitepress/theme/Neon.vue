@@ -1,11 +1,11 @@
 <template>
-    <span class="item-card"><slot /></span>
+    <span class="neon"><slot /></span>
 </template>
 
 <script setup>
 </script>
 
-<style>
+<style scoped>
 @keyframes lights {
   0% {
   color: hsl(230, 40%, 80%);

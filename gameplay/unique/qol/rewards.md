@@ -9,7 +9,7 @@ aside: false
 Заслуги лежат в отдельной вкладке достижений **«Catcraft — сообщество»**!.  
 Чтобы их получить, нужно очень постараться и показать свои старания любому **Всекоту**!
 
-![Вкладка достижений сообщества на Кошкокрафте](/assets/gameplay/rewards/advancement.png){decoding="async" loading="lazy" width=75% }
+![Вкладка достижений сообщества на Кошкокрафте](/assets/gameplay/rewards/advancement.webp){decoding="async" loading="lazy" width=75% }
 
 ### За что дают?
 

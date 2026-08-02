@@ -3,36 +3,28 @@
 </template>
 
 <script>
+// Общие значения, подставляемые в текст страниц: <InlineValue name="version" />
+// Лежат в области модуля, а не в data(): валидатор пропа выполняется вне
+// экземпляра компонента, поэтому `this.values` там был undefined и вместо
+// проверки бросал TypeError при рендере в dev-режиме.
+const VALUES = {
+  version: '1.21.11',
+  currentYear: new Date().getFullYear()
+}
+
 export default {
   name: 'InlineValue',
   props: {
     name: {
       type: String,
       required: true,
-      validator: value => Object.prototype.hasOwnProperty.call(this.values, value)
-    }
-  },
-  data() {
-    return {
-      // Здесь храним все общие значения
-      values: {
-        version: '1.21.11',
-        currentYear: new Date().getFullYear()
-      }
+      validator: value => Object.prototype.hasOwnProperty.call(VALUES, value)
     }
   },
   computed: {
     displayValue() {
-      return this.values[this.name] || ''
+      return VALUES[this.name] ?? ''
     }
   }
 }
 </script>
-
-<style scoped>
-.inline-value {
-  display: inline;
-  padding: 0;
-  margin: 0;
-}
-</style>
