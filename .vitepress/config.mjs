@@ -123,7 +123,6 @@ const bestiarySidebar = [
       { text: 'Тренировочный манекен', link: '/bestiary/custom_items/dummy.md' },
       { text: 'Петарды', link: '/bestiary/custom_items/firecrackers.md' },
       { text: 'Кошелёк', link: '/bestiary/custom_items/wallet.md' },
-      { text: 'Почта', link: '/bestiary/usable/mail.md' },
       { text: 'Руны обликов', link: '/bestiary/usable/runes.md' },
       { text: 'Награды строителям', link: '/bestiary/usable/awards.md' },
       { text: 'Говно', link: '/bestiary/materials/poop.md' },
