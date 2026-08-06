@@ -193,6 +193,27 @@ h3 {
   }
 }
 
+/* Пункты меню + поиск + «…» дают ~886px несжимаемой ширины: VitePress
+   показывает меню уже с 768px, и на 768–958px навбар вылезает за вьюпорт —
+   вся страница получает горизонтальный скролл. Сдвигаем брейкпоинт
+   меню→бургер на 960px, к порогу, где VitePress прячет сайдбар.
+   VPNavScreen рендерится только открытым (v-if="open" в VPNavScreen.vue),
+   поэтому display:block не накрывает закрытую страницу. */
+@media (min-width: 768px) and (max-width: 959px) {
+  .VPNavBarMenu {
+    display: none !important;
+  }
+  .VPNavBarExtra {
+    display: none !important;
+  }
+  .VPNavBarHamburger {
+    display: flex !important;
+  }
+  .VPNavScreen {
+    display: block !important;
+  }
+}
+
 @media (min-width: 960px) {
   .content-body {
     background-color: transparent !important;
