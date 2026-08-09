@@ -155,7 +155,7 @@ export default defineConfig({
       guides:   { name: 'Информация', url: '/info/faq' },
       gameplay: { name: 'Механики',   url: '/gameplay/unique/qol/small_features' },
       bestiary: { name: 'Бестиарий',  url: '/bestiary/main' },
-      updates:  { name: 'Обновления', url: '/updates/7season/7_0_4' },
+      updates:  { name: 'Обновления', url: '/updates/8season/8_0_2' },
       history:  { name: 'История',    url: '/history/1season/1season' },
     };
 
@@ -193,7 +193,7 @@ export default defineConfig({
           return { ...item, priority: 1.0, changefreq: 'daily' };
         }
 
-        if (item.url.includes('/updates/7season/')) {
+        if (item.url.includes('/updates/8season/')) {
           return { ...item, priority: 0.9, changefreq: 'weekly' };
         }
 
@@ -360,7 +360,7 @@ export default defineConfig({
       { text: 'Механики', link: '/gameplay/main' },
       { text: 'Бестиарий', link: '/bestiary/main.md' },
       { text: 'История', link: '/history/1season/1season.md' },
-      { text: 'Обновления', link: '/updates/7season/7_0_4.md' }
+      { text: 'Обновления', link: '/updates/8season/8_0_2.md' }
     ],
 
     socialLinks: [
@@ -374,7 +374,16 @@ export default defineConfig({
       '/updates': [
         {
           text: "8 сезон",
-          items: []
+          items: [
+            {
+              "text": "8.0.2",
+              link: "/updates/8season/8_0_2.md"
+            },
+            {
+              "text": "8.0.1",
+              link: "/updates/8season/8_0_1.md"
+            }
+          ]
         },
         {
           text: "Архив",
