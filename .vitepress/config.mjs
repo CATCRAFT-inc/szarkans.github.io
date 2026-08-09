@@ -91,6 +91,10 @@ export default defineConfig({
     'gameplay/unique/decor.md',            // ждёт сверки с новым CraftEngine
     'gameplay/unique/wardrobe.md',         // гардеробная не перенесена на новый сервер
     'gameplay/unique/mods/figura.md',      // ждёт решения по моду
+
+    // Скрыто 09.08.2026: страница есть, механики на сервере пока нет.
+    'gameplay/unique/clans.md',            // кланы не реализованы
+    'gameplay/unique/catenary.md',         // верёвки с физикой
   ],
 
   // ignoreDeadLinks намеренно не задан: заглушка под скрытые страницы КСБ
