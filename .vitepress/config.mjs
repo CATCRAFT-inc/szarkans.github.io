@@ -189,28 +189,37 @@ export default defineConfig({
     hostname: 'https://wiki.catcraft.ru',
     transformItems: (items) => {
       return items.map((item) => {
-        if (item.url === '') {
+        // 🛑 VitePress отдаёт `url` БЕЗ ведущего слеша: `updates/8season/8_0_2`,
+        // а не `/updates/8season/8_0_2`. Поэтому проверки ниже, написанные как
+        // `includes('/updates/')`, не срабатывали ни разу за всё время: из 153
+        // страниц приоритет получали четыре, и три из них — по случайности,
+        // у гайдов кусок `/gameplay/` нашёлся в СЕРЕДИНЕ адреса
+        // (`guides/gameplay/rgb_nick`). Остальные 149 уходили в поиск с 0.5.
+        // Нормализуем один раз — дальше правила работают так, как написаны.
+        const url = item.url.startsWith('/') ? item.url : `/${item.url}`;
+
+        if (url === '/') {
           return { ...item, priority: 1.0, changefreq: 'daily' };
         }
 
-        if (item.url.includes('/updates/8season/')) {
+        if (url.includes('/updates/8season/')) {
           return { ...item, priority: 0.9, changefreq: 'weekly' };
         }
 
-        if (item.url.includes('/info/faq') || item.url.includes('/guides/')) {
+        if (url.includes('/info/faq') || url.includes('/guides/')) {
           return { ...item, priority: 0.8, changefreq: 'monthly' };
         }
 
-        if (item.url.includes('/gameplay/') || item.url.includes('/bestiary/')) {
+        if (url.includes('/gameplay/') || url.includes('/bestiary/')) {
           return { ...item, priority: 0.7, changefreq: 'monthly' };
         }
 
-        if (item.url.includes('/updates/')) {
+        if (url.includes('/updates/')) {
           return { ...item, priority: 0.5, changefreq: 'monthly' };
         }
 
         // История
-        if (item.url.includes('/history/')) {
+        if (url.includes('/history/')) {
           return { ...item, priority: 0.6, changefreq: 'monthly' };
         }
 
