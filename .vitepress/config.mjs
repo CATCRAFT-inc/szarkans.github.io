@@ -63,6 +63,28 @@ const adhdVideosPlugin = {
   }
 }
 
+// Важность страниц для поисковиков (sitemap, поле priority ниже).
+//
+// Разложено по тому, ЗАЧЕМ человек приходит на страницу из поиска, а не по
+// тому, где она лежит в дереве. Хочешь поменять — правь эти два списка,
+// остальное считается по разделам.
+
+// За этим приходят чаще всего: человек выбирает, заходить ли на сервер,
+// и человек, которого касаются правила. Плюс нормативка живых игроков.
+const SEARCH_ENTRY = [
+  '/info/faq',        // как зайти, версия, что за сервер
+  '/info/guide',      // гайд для новичка
+  '/info/rules/',     // правила и законы
+];
+
+// Служебное: нужно редко, целенаправленно из поиска не ищется, ссылок
+// внутри сайта почти нет (брендбук и «для медиа» — по одной и по нулю).
+const SERVICE_PAGES = [
+  '/info/brandbook',
+  '/info/for_media',
+  '/info/prefixes',
+];
+
 export default defineConfig({
   title: "Кошкокрафт",
   lang: 'ru',
@@ -206,7 +228,17 @@ export default defineConfig({
           return { ...item, priority: 0.9, changefreq: 'weekly' };
         }
 
-        if (url.includes('/info/faq') || url.includes('/guides/')) {
+        if (SEARCH_ENTRY.some((p) => url.startsWith(p))) {
+          return { ...item, priority: 0.9, changefreq: 'monthly' };
+        }
+
+        if (SERVICE_PAGES.some((p) => url.startsWith(p))) {
+          return { ...item, priority: 0.6, changefreq: 'monthly' };
+        }
+
+        // Остальная справка: донат, моды, карта, баны, администрация, фермы
+        // и все гайды. За этим приходят целенаправленно, но реже.
+        if (url.startsWith('/info/') || url.includes('/guides/')) {
           return { ...item, priority: 0.8, changefreq: 'monthly' };
         }
 
