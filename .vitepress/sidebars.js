@@ -91,8 +91,8 @@ export const mechanicsSidebar = [
         blurb: 'Ловля превратилась в мини-игру, а не в АФК с зажатым ПКМ' },
       { text: 'Рисование', link: '/gameplay/unique/artmap.md', icon: '/assets/crafts/easel.webp',
         blurb: 'Садись за мольберт и рисуй свои шедевры прямо в игре' },
-      { text: 'Кланы β', link: '/gameplay/unique/clans.md', icon: '/assets/mechanics/filled_map.webp',
-        blurb: 'Гильдия, ОПГ или банда — собирай своих' },
+      // { text: 'Кланы β', link: '/gameplay/unique/clans.md', icon: '/assets/mechanics/filled_map.webp',
+      //   blurb: 'Гильдия, ОПГ или банда — собирай своих' },  - скрыто: не реализовано
     ]
   },
   {
@@ -105,7 +105,7 @@ export const mechanicsSidebar = [
       // { text: 'Подключение к Дискорду', link: '/gameplay/unique/qol/discord_link.md' }, - скрыто
       { text: 'Маленькие механики', link: '/gameplay/unique/qol/small_features.md', icon: '/assets/mechanics/bundle.webp' },
       { text: 'Войсчат', link: '/gameplay/unique/mods/voicechat.md', icon: '/assets/mechanics/goat_horn.webp' },
-      { text: 'Реалистичные верёвки', link: '/gameplay/unique/catenary.md', icon: '/assets/mechanics/lead.webp' },
+      // { text: 'Реалистичные верёвки', link: '/gameplay/unique/catenary.md', icon: '/assets/mechanics/lead.webp' }, - скрыто
       // { text: 'Мебель и декорации', link: '/gameplay/unique/decor.md' }, - скрыто
       // { text: 'Гардеробная обликов', link: '/gameplay/unique/wardrobe.md' }, - скрыто
       // { text: 'Figura', link: '/gameplay/unique/mods/figura.md' }, - скрыто
