@@ -62,6 +62,7 @@ import AdhdMode from './AdhdMode.vue';
 import Obfuscated from './Obfuscated.vue';
 import GlitchBlock from './GlitchBlock.vue';
 import WikiIndex from './WikiIndex.vue';
+import HistoryTimeline from './HistoryTimeline.vue';
 //
 
 import VueEasyLightbox from 'vue-easy-lightbox';
@@ -135,6 +136,7 @@ export default {
     app.component('Obfuscated', Obfuscated);
     app.component('GlitchBlock', GlitchBlock);
     app.component('WikiIndex', WikiIndex);
+    app.component('HistoryTimeline', HistoryTimeline);
     //
     app.directive('tooltip', Tooltip);
   }

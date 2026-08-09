@@ -8,14 +8,15 @@
     "vitepress-plugin-tabs": "^0.7.3"
   },
   "scripts": {
-    "predocs:dev": "node scripts/optimize-images.js",
+    "predocs:dev": "node scripts/optimize-images.js && node scripts/check-seasons.mjs",
     "docs:dev": "vitepress dev",
-    "predocs:build": "node scripts/optimize-images.js",
+    "predocs:build": "node scripts/optimize-images.js && node scripts/check-seasons.mjs",
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview",
     "generate-manifest": "node scripts/manifest.js",
     "check-descriptions": "node scripts/check-descriptions.js",
-    "optimize-images": "node scripts/optimize-images.js"
+    "optimize-images": "node scripts/optimize-images.js",
+    "check-seasons": "node scripts/check-seasons.mjs"
   },
   "dependencies": {
     "@floating-ui/dom": "^1.6.11",

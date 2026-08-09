@@ -385,3 +385,20 @@ strong {
     radial-gradient(ellipse 500px 450px at 93% 94%,  rgba(110, 61, 206, 0.07) 0%, transparent 70%);
   background-attachment: fixed;
 }
+/* =============================================
+   Дорога назад в хаб раздела («← Все сезоны»)
+   Красим в покое, а не по наведению: в цвете
+   обычного текста строка читается как заголовок
+   группы, а на телефоне hover не существует
+   вовсе — там сигнала не было бы совсем.
+   Тот же разбор, что у ссылок на самих хабах.
+   ============================================= */
+
+.VPSidebarItem .text .sidebar-back {
+  color: #c4b5fd;
+}
+
+.VPSidebarItem .link:hover .text .sidebar-back,
+.VPSidebarItem .link:focus-visible .text .sidebar-back {
+  color: #e8e7f0;
+}

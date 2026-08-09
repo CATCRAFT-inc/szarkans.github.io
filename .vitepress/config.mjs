@@ -156,7 +156,7 @@ export default defineConfig({
       gameplay: { name: 'Механики',   url: '/gameplay/unique/qol/small_features' },
       bestiary: { name: 'Бестиарий',  url: '/bestiary/main' },
       updates:  { name: 'Обновления', url: '/updates/8season/8_0_2' },
-      history:  { name: 'История',    url: '/history/1season/1season' },
+      history:  { name: 'История',    url: '/history/' },
     };
 
     const section = sections[pageData.relativePath.split('/')[0]];
@@ -359,7 +359,10 @@ export default defineConfig({
       { text: 'Начать играть', link: '/info/faq' },
       { text: 'Механики', link: '/gameplay/main' },
       { text: 'Бестиарий', link: '/bestiary/main.md' },
-      { text: 'История', link: '/history/1season/1season.md' },
+      // activeMatch: иначе пункт подсвечен только на самом хабе — VitePress
+      // сравнивает путь точно. Раздел из шестнадцати страниц выглядел бы
+      // так, будто игрок в нём не находится.
+      { text: 'История', link: '/history/', activeMatch: '^/history/' },
       { text: 'Обновления', link: '/updates/8season/8_0_2.md' }
     ],
 
@@ -622,6 +625,9 @@ export default defineConfig({
       '/bestiary/vanilla/': mechanicsSidebar,
       '/bestiary': bestiarySidebar,
       '/history/': [
+        // Обратно на страницу-вход: из статьи сезона иначе не выбраться,
+        // кроме как через навбар.
+        { text: '<span class="sidebar-back">← Все сезоны</span>', link: '/history/' },
         {
           text: '1 сезон',
           items: [

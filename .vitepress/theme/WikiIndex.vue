@@ -84,7 +84,12 @@ const props = defineProps({
 
 const FALLBACK_ICON = '/assets/info/brandbook/paw_purple.svg';
 
-const groups = computed(() => sidebarsBySection[props.section] ?? []);
+// Строки без `items` — это одиночные ссылки бокового меню (в первую очередь
+// «← Весь бестиарий», дорога обратно сюда же). В хабе им делать нечего:
+// группой они не являются и нарисовались бы пустой коробкой с заголовком.
+const groups = computed(() =>
+  (sidebarsBySection[props.section] ?? []).filter((g) => g.items?.length)
+);
 const featuredGroups = computed(() => groups.value.filter((g) => g.featured));
 const listGroups = computed(() => groups.value.filter((g) => !g.featured));
 // Иконки — свойство ГРУППЫ, а не строки. У предметов текстура есть, у механик
