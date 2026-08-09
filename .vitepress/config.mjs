@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress';
 import { tabsMarkdownPlugin } from 'vitepress-plugin-tabs';
 import fs from 'fs';
 import path from 'path';
+import { bestiarySidebar, mechanicsSidebar } from './sidebars.js';
 
 const updatesPath = path.resolve(__dirname, '../updates/6season/');
 
@@ -43,100 +44,6 @@ const startPlayingSidebar = [
   }
 ];
 
-const mechanicsSidebar = [
-  // ── КАК ИГРАТЬ ───────────────────────────────────────
-  // Группа «Роллплей» снята целиком: КСБ распущен, страница РП ролей удалена.
-  {
-    text: 'Общие механики',
-    items: [
-      { text: 'Команды', link: '/gameplay/unique/commands.md' },
-      // { text: 'Профиль игрока', link: '/gameplay/unique/qol/profile.md' },
-      { text: 'Достижения сообщества', link: '/gameplay/unique/qol/rewards.md' },
-      { text: 'Почта', link: '/gameplay/unique/mail.md' },
-      // { text: 'Подключение к Дискорду', link: '/gameplay/unique/qol/discord_link.md' }, - скрыто
-      { text: 'Маленькие механики', link: '/gameplay/unique/qol/small_features.md' },
-    ]
-  },
-  {
-    text: 'Активности',
-    items: [
-      { text: 'Варка напитков', link: '/gameplay/unique/brewery.md' },
-      { text: 'Рыбалка', link: '/gameplay/unique/fishing.md' },
-      { text: 'Рисование', link: '/gameplay/unique/artmap.md' },
-      // { text: 'Мебель и декорации', link: '/gameplay/unique/decor.md' }, - скрыто
-      { text: 'Реалистичные верёвки', link: '/gameplay/unique/catenary.md' },
-    ]
-  },
-  {
-    text: 'Прочее',
-    items: [
-      { text: 'Кланы β', link: '/gameplay/unique/clans.md' },
-      // { text: 'Гардеробная обликов', link: '/gameplay/unique/wardrobe.md' }, - скрыто
-      // { text: 'Figura', link: '/gameplay/unique/mods/figura.md' }, - скрыто
-      { text: 'Войсчат', link: '/gameplay/unique/mods/voicechat.md' },
-    ]
-  },
-  {
-    text: 'Геймплейные гайды',
-    items: [
-      { text: 'Как провести ивент?', link: '/guides/gameplay/create_event.md' },
-      { text: 'Как сделать разноцветный ник?', link: '/guides/gameplay/rgb_nick.md' },
-      { text: 'Как поставить другой скин?', link: '/guides/gameplay/set_skin.md' },
-    ]
-  },
-];
-
-const bestiarySidebar = [
-  {
-    text: 'Изменения Ваниллы',
-    items: [
-      { text: 'Изменения крафтов', link: '/bestiary/vanilla/vanilla_crafts.md' },
-      { text: 'Изменения механик', link: '/bestiary/vanilla/vanilla_edits.md' },
-    ]
-  },
-  {
-    text: 'Разное',
-    items: [
-      { text: 'Жители Столицы', link: '/bestiary/mobs/npc.md' },
-      { text: 'Зачарования', link: '/bestiary/enchantments.md' },
-
-    ]
-
-  },
-  {
-    text: 'Инструменты',
-    items: [
-      { text: 'Крюк-кошка', link: '/bestiary/custom_items/grappling_hook.md' },
-      { text: 'Эхо-колокол', link: '/bestiary/custom_items/echo_bell.md' },
-      { text: 'Кувалда', link: '/bestiary/custom_items/hammer.md' },
-      { text: 'Кузнечная кувалда', link: '/bestiary/custom_items/smithing_hammer.md' },
-      { text: 'Пылесос', link: '/bestiary/custom_items/hoover.md' },
-      { text: 'Киянка', link: '/bestiary/custom_items/mallet.md' },
-      { text: 'Фотоаппарат', link: '/bestiary/custom_items/camera.md' },
-      { text: 'Рисование', link: '/bestiary/custom_items/painting_tools.md' },
-    ]
-  },
-  {
-    text: 'Предметы',
-    items: [
-      { text: 'Стеклянный меч', link: '/bestiary/custom_items/glass_sword.md' },
-      { text: 'Тренировочный манекен', link: '/bestiary/custom_items/dummy.md' },
-      { text: 'Петарды', link: '/bestiary/custom_items/firecrackers.md' },
-      { text: 'Кошелёк', link: '/bestiary/custom_items/wallet.md' },
-      { text: 'Почта', link: '/bestiary/usable/mail.md' },
-      { text: 'Руны обликов', link: '/bestiary/usable/runes.md' },
-      { text: 'Награды строителям', link: '/bestiary/usable/awards.md' },
-      { text: 'Говно', link: '/bestiary/materials/poop.md' },
-    ]
-  },
-  {
-    text: 'Блоки',
-    items: [
-      { text: 'Укреплённый глубинный сланец', link: '/bestiary/blocks/reinforced_deepslate.md' },
-    ]
-  }
-];
-
 const adhdVideosPlugin = {
   name: 'adhd-videos',
   resolveId(id) {
@@ -167,6 +74,7 @@ export default defineConfig({
   // на ссылках внутри рабочих заметок.
   srcExclude: [
     'docs/**', 'README.md', 'CLAUDE.md', 'CLAUDE.local.md', 'vibecode/**',
+    'PRODUCT.md', 'DESIGN.md',          // записи плагина impeccable, не страницы вики
 
     // Скрытые страницы: файлы остаются в репозитории, но сайт их не собирает -
     // по прямой ссылке их тоже не открыть. Вернуть = убрать строку отсюда.
@@ -176,7 +84,6 @@ export default defineConfig({
 
     'gameplay/roleplay/goverment.md',   // КСБ распущен
     'gameplay/roleplay/police.md',      // КСБ распущен
-    'gameplay/main.md',                 // заглушка на время скрытия раздела
     'bestiary/test.md',
 
     // Скрыто при переписывании раздела под новый сервер (01.08.2026):
@@ -450,7 +357,7 @@ export default defineConfig({
     langMenuLabel: 'Изменить язык',
     nav: [
       { text: 'Начать играть', link: '/info/faq' },
-      { text: 'Механики', link: '/gameplay/unique/qol/small_features' },
+      { text: 'Механики', link: '/gameplay/main' },
       { text: 'Бестиарий', link: '/bestiary/main.md' },
       { text: 'История', link: '/history/1season/1season.md' },
       { text: 'Обновления', link: '/updates/7season/7_0_4.md' }
@@ -700,6 +607,10 @@ export default defineConfig({
       '/info/': startPlayingSidebar,
       '/guides/': startPlayingSidebar,
       '/gameplay/': mechanicsSidebar,
+      // Ванильные страницы физически лежат в /bestiary/, но по смыслу они из
+      // Механик — отдаём им меню Механик. Префикс длиннее '/bestiary',
+      // поэтому VitePress выберет именно его.
+      '/bestiary/vanilla/': mechanicsSidebar,
       '/bestiary': bestiarySidebar,
       '/history/': [
         {
