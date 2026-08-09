@@ -59,6 +59,7 @@ export const bestiarySidebar = [
       { text: 'Кошелёк', link: '/bestiary/custom_items/wallet.md', icon: '/assets/crafts/wallet.webp' },
       { text: 'Почта', link: '/bestiary/usable/mail.md', icon: '/assets/crafts/mailbell.webp' },
       { text: 'Руны обликов', link: '/bestiary/usable/runes.md', icon: '/assets/crafts/rune.webp' },
+      { text: 'Древние пластинки', link: '/bestiary/usable/discs.md', icon: '/assets/crafts/no_homo_disc.webp' },
       { text: 'Награды строителям', link: '/bestiary/usable/awards.md', icon: '/assets/crafts/builder_glove.webp' },
       { text: 'Говно', link: '/bestiary/materials/poop.md', icon: '/assets/crafts/poop.webp' },
     ]
