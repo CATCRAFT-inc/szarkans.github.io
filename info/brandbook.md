@@ -34,13 +34,15 @@ aside: false
 <CardGrid>
 <Card style="overflow: hidden;" class="m-0">
     <template #header>
-        <Image alt="user header" src="/assets/info/brandbook/logo.webp" preview />
+        <Image alt="Текстовый логотип Кошкокрафта: CATCRAFT REBORN" src="/assets/info/brandbook/logo_reborn.webp" preview />
     </template>
+    <template #subtitle>Актуальный</template>
 </Card>
 <Card style="overflow: hidden;" class="m-0">
     <template #header>
-        <Image alt="user header" src="/assets/info/brandbook/logo2.webp" preview />
+        <Image alt="Текстовый логотип Кошкокрафта: CATCRAFT NEW GEN" src="/assets/info/brandbook/logo2.webp" preview />
     </template>
+    <template #subtitle>Старый</template>
 </Card>
 </CardGrid>
 
@@ -62,35 +64,6 @@ aside: false
 </Card>
 </CardGrid>
 
-## Скины админов
-
-<CardGrid>
-<Card style="overflow: hidden;" class="m-0">
-    <template #header>
-        <Image alt="user header" src="https://mineskin.eu/skin/Szarkan" preview />
-    </template>
-    <template #subtitle>Szarkan</template>
-</Card>
-<Card style="overflow: hidden;" class="m-0">
-    <template #header>
-        <Image alt="user header" src="https://mineskin.eu/skin/CharaBell" preview />
-    </template>
-    <template #subtitle>CharaBell</template>
-</Card>
-<Card style="overflow: hidden;" class="m-0">
-    <template #header>
-        <Image alt="user header" src="https://mineskin.eu/skin/sm1lly" preview />
-    </template>
-    <template #subtitle>sm1lly</template>
-</Card>
-<Card style="overflow: hidden;" class="m-0">
-    <template #header>
-        <Image alt="user header" src="https://mineskin.eu/skin/ShirooQWT" preview />
-    </template>
-    <template #subtitle>ShirooQWT</template>
-</Card>
-</CardGrid>
-
 <!-- Скрыто: старые иконки-лапки
 <CardGrid>
 <Card style="overflow: hidden;" class="m-0">
@@ -104,13 +77,4 @@ aside: false
     </template>
 </Card>
 </CardGrid>
--->
-
-<!-- Скрыто: скин cantcaaat
-<Card style="overflow: hidden;" class="m-0">
-    <template #header>
-        <Image alt="user header" src="https://mineskin.eu/skin/cantcaaat" preview />
-    </template>
-    <template #subtitle>cantcaaat</template>
-</Card>
 -->
