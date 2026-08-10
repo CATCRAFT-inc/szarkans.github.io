@@ -61,6 +61,7 @@ export const bestiarySidebar = [
       { text: 'Руны обликов', link: '/bestiary/usable/runes.md', icon: '/assets/crafts/rune.webp' },
       { text: 'Древние пластинки', link: '/bestiary/usable/discs.md', icon: '/assets/crafts/no_homo_disc.webp' },
       { text: 'Награды строителям', link: '/bestiary/usable/awards.md', icon: '/assets/crafts/builder_glove.webp' },
+      { text: 'Возвратная конфета', link: '/bestiary/usable/candy.md', icon: '/assets/crafts/recovery_candy.webp' },
       { text: 'Говно', link: '/bestiary/materials/poop.md', icon: '/assets/crafts/poop.webp' },
     ]
   },
@@ -99,6 +100,7 @@ export const mechanicsSidebar = [
     text: 'Общие механики',
     items: [
       { text: 'Команды', link: '/gameplay/unique/commands.md', icon: '/assets/mechanics/writable_book.webp' },
+      { text: 'Мурки', link: '/gameplay/unique/catcoins.md', icon: '/assets/crafts/catcoin.webp' },
       // { text: 'Профиль игрока', link: '/gameplay/unique/qol/profile.md' },
       { text: 'Почта', link: '/gameplay/unique/mail.md', icon: '/assets/crafts/mailbell.webp' },
       { text: 'Достижения сообщества', link: '/gameplay/unique/qol/rewards.md', icon: '/assets/mechanics/nether_star.webp' },
