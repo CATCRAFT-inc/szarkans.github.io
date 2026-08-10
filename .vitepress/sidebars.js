@@ -106,6 +106,7 @@ export const mechanicsSidebar = [
       { text: 'Достижения сообщества', link: '/gameplay/unique/qol/rewards.md', icon: '/assets/mechanics/nether_star.webp' },
       // { text: 'Подключение к Дискорду', link: '/gameplay/unique/qol/discord_link.md' }, - скрыто
       { text: 'Маленькие механики', link: '/gameplay/unique/qol/small_features.md', icon: '/assets/mechanics/bundle.webp' },
+      { text: 'Свои пластинки', link: '/gameplay/unique/burner.md', icon: '/assets/crafts/radiotrance_disc.webp' },
       { text: 'Войсчат', link: '/gameplay/unique/mods/voicechat.md', icon: '/assets/mechanics/goat_horn.webp' },
       // { text: 'Реалистичные верёвки', link: '/gameplay/unique/catenary.md', icon: '/assets/mechanics/lead.webp' }, - скрыто
       // { text: 'Мебель и декорации', link: '/gameplay/unique/decor.md' }, - скрыто
