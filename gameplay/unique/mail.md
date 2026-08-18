@@ -41,7 +41,7 @@ description: Как работает почта на Кошкокрафте - я
 
   - Пишешь текст, какой хочешь, главное по [нашим правилам!](/info/rules/rules.md#заповеди-общения)
 
-  - Выбираешь **адрес** из списка **всех** ящиков сервера
+  - Выбираешь **адрес** из списка **всех** ящиков сервера. Тем, кому пишешь часто, ставишь звёздочку - такие адреса подсвечиваются и висят наверху списка
     
   - Жмёшь **«Отправить»** и готово!
 
@@ -61,30 +61,32 @@ const iron = {
   name: "Железный слиток",
   link: "https://ru.minecraft.wiki/w/Железный_слиток"
 }
-const eye = {
-  image: "https://minecraft.wiki/images/Invicon_Eye_of_Ender.png",
-  name: "Око Эндера",
-  link: "https://ru.minecraft.wiki/w/Око_Эндера"
+const pearl = {
+  image: "https://minecraft.wiki/images/Invicon_Ender_Pearl.png",
+  name: "Жемчуг Эндера",
+  link: "https://ru.minecraft.wiki/w/Жемчуг_Эндера"
 }
 
 const mailboxRecipe = [
   [iron, iron, iron],
-  [iron, eye, iron],
+  [iron, pearl, iron],
   [iron, iron, iron],
 ]
 
 const mailboxResult = {
+  image: '/assets/crafts/mailbox.webp',
   name: 'Почтовый ящик',
   count: 1
 }
 
 const smallMailboxRecipe = [
   [null, iron, null],
-  [iron, eye, iron],
+  [iron, pearl, iron],
   [null, iron, null],
 ]
 
 const smallMailboxResult = {
+  image: '/assets/crafts/small_mailbox.webp',
   name: 'Малый почтовый ящик',
   count: 1
 }
