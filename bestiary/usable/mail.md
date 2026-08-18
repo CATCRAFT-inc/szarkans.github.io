@@ -1,5 +1,6 @@
 ---
 aside: false
+description: Почтовый ящик, колокольчик и посылка - из чего собрана почта на Кошкокрафте.
 ---
 
 # Почта
@@ -12,6 +13,9 @@ aside: false
 
 <ItemCard>
 <Card style="overflow: hidden;" class="m-0">
+    <template #header>
+        <Image alt="Почтовый ящик" src="/assets/crafts/mailbox.webp" width="40%"/>
+    </template>
     <template #title>Почтовый ящик</template>
     <template #content>
       <Divider />
@@ -86,30 +90,32 @@ const iron = {
   name: "Железный слиток",
   link: "https://ru.minecraft.wiki/w/Железный_слиток"
 }
-const eye = {
-  image: "https://minecraft.wiki/images/Invicon_Eye_of_Ender.png",
-  name: "Око Эндера",
-  link: "https://ru.minecraft.wiki/w/Око_Эндера"
+const pearl = {
+  image: "https://minecraft.wiki/images/Invicon_Ender_Pearl.png",
+  name: "Жемчуг Эндера",
+  link: "https://ru.minecraft.wiki/w/Жемчуг_Эндера"
 }
 
 const mailboxRecipe = [
   [iron, iron, iron],
-  [iron, eye, iron],
+  [iron, pearl, iron],
   [iron, iron, iron],
 ]
 
 const mailboxResult = {
+  image: '/assets/crafts/mailbox.webp',
   name: 'Почтовый ящик',
   count: 1
 }
 
 const smallMailboxRecipe = [
   [null, iron, null],
-  [iron, eye, iron],
+  [iron, pearl, iron],
   [null, iron, null],
 ]
 
 const smallMailboxResult = {
+  image: '/assets/crafts/small_mailbox.webp',
   name: 'Малый почтовый ящик',
   count: 1
 }

@@ -181,7 +181,7 @@ export default defineConfig({
       guides:   { name: 'Информация', url: '/info/faq' },
       gameplay: { name: 'Механики',   url: '/gameplay/unique/qol/small_features' },
       bestiary: { name: 'Бестиарий',  url: '/bestiary/main' },
-      updates:  { name: 'Обновления', url: '/updates/8season/8_0_3' },
+      updates:  { name: 'Обновления', url: '/updates/8season/8_0_4' },
       history:  { name: 'История',    url: '/history/' },
     };
 
@@ -408,7 +408,7 @@ export default defineConfig({
       // сравнивает путь точно. Раздел из шестнадцати страниц выглядел бы
       // так, будто игрок в нём не находится.
       { text: 'История', link: '/history/', activeMatch: '^/history/' },
-      { text: 'Обновления', link: '/updates/8season/8_0_3.md' }
+      { text: 'Обновления', link: '/updates/8season/8_0_4.md' }
     ],
 
     socialLinks: [
@@ -423,6 +423,10 @@ export default defineConfig({
         {
           text: "8 сезон",
           items: [
+            {
+              "text": "8.0.4",
+              link: "/updates/8season/8_0_4.md"
+            },
             {
               "text": "8.0.3",
               link: "/updates/8season/8_0_3.md"

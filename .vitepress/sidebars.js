@@ -46,6 +46,7 @@ export const bestiarySidebar = [
       { text: 'Кузнечная кувалда', link: '/bestiary/custom_items/smithing_hammer.md', icon: '/assets/crafts/smithing_hammer.webp' },
       { text: 'Пылесос', link: '/bestiary/custom_items/hoover.md', icon: '/assets/crafts/hoover.webp' },
       { text: 'Киянка', link: '/bestiary/custom_items/mallet.md', icon: '/assets/crafts/mallet.webp' },
+      { text: 'Светогель', link: '/bestiary/custom_items/glowgel.md', icon: '/assets/crafts/glowgel.webp' },
       { text: 'Фотоаппарат', link: '/bestiary/custom_items/camera.md', icon: '/assets/crafts/camera.webp' },
       { text: 'Рисование', link: '/bestiary/custom_items/painting_tools.md', icon: '/assets/crafts/easel.webp' },
     ]
@@ -62,6 +63,8 @@ export const bestiarySidebar = [
       { text: 'Древние пластинки', link: '/bestiary/usable/discs.md', icon: '/assets/crafts/no_homo_disc.webp' },
       { text: 'Награды строителям', link: '/bestiary/usable/awards.md', icon: '/assets/crafts/builder_glove.webp' },
       { text: 'Возвратная конфета', link: '/bestiary/usable/candy.md', icon: '/assets/crafts/recovery_candy.webp' },
+      { text: 'Возвратные часы', link: '/bestiary/usable/recovery_clock.md', icon: '/assets/crafts/recovery_clock.webp' },
+      { text: 'Кошачья мята', link: '/bestiary/materials/catmint.md', icon: '/assets/crafts/catmint.webp' },
       { text: 'Говно', link: '/bestiary/materials/poop.md', icon: '/assets/crafts/poop.webp' },
     ]
   },

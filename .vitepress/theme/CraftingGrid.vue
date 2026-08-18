@@ -23,10 +23,14 @@
                 @mouseenter="showTooltip($event, slot.name, `ingredient-${rowIndex}-${colIndex}`, 'ingredient')"
                 @mouseleave="hideTooltip(`ingredient-${rowIndex}-${colIndex}`)"
               >
-                <img 
-                  :src="slot.image" 
+                <span v-if="!loaded[slot.image]" class="slot-skeleton" aria-hidden="true"></span>
+                <img
+                  :src="slot.image"
                   :alt="slot.name || 'Ingredient'"
                   class="item-icon"
+                  :class="{ 'icon-pending': !loaded[slot.image] }"
+                  @load="markLoaded(slot.image)"
+                  @error="markLoaded(slot.image)"
                 />
               </a>
               
@@ -61,11 +65,15 @@
             @mouseenter="showTooltip($event, result.name, 'result', 'result')"
             @mouseleave="hideTooltip('result')"
           >
-            <img 
+            <span v-if="result.image && !loaded[result.image]" class="slot-skeleton" aria-hidden="true"></span>
+            <img
               v-if="result.image"
-              :src="result.image" 
+              :src="result.image"
               :alt="result.name || 'Result'"
               class="item-icon result-icon"
+              :class="{ 'icon-pending': !loaded[result.image] }"
+              @load="markLoaded(result.image)"
+              @error="markLoaded(result.image)"
             />
 
             <span
@@ -125,6 +133,13 @@ const props = defineProps({
 // Состояние тултипов
 const tooltips = reactive({})
 const tooltipStyles = reactive({})
+
+// Какие иконки уже доехали. Ключ — сам src, поэтому одинаковые ингредиенты
+// в сетке гасят скелетон разом. Иконки ванильных предметов лежат на
+// minecraft.wiki, и до ответа чужого сервера браузер рисовал в слоте alt —
+// название предмета, которое в 52 пикселя не влезает и распирает сетку.
+const loaded = reactive({})
+const markLoaded = (src) => { loaded[src] = true }
 
 // Преобразование матрицы ингредиентов для удобства работы
 const ingredientsMatrix = computed(() => {
@@ -316,6 +331,30 @@ const hideTooltip = (key) => {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* Скелетон на время загрузки иконки */
+.slot-skeleton {
+  position: absolute;
+  inset: 4px;
+  background: linear-gradient(100deg, #6E6E6E 20%, #BFBFBF 42%, #6E6E6E 64%);
+  background-size: 280% 100%;
+  animation: slot-sweep 1.15s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes slot-sweep {
+  from { background-position: 140% 0; }
+  to   { background-position: -40% 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slot-skeleton { animation: none; }
+}
+
+/* Прячем картинку целиком: иначе браузер печатает в слоте alt-текст */
+.icon-pending {
+  opacity: 0;
 }
 
 /* Иконка предмета */

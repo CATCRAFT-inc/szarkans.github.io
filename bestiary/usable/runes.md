@@ -1,5 +1,6 @@
 ---
 aside: false
+description: Руны обликов и Антируна - как поменять предмету внешний вид через кузнечный стол.
 ---
 
 # Руны обликов
@@ -7,7 +8,10 @@ aside: false
 <ItemCard>
 <Card style="overflow: hidden;" class="m-0">
     <template #header>
-        <Image alt="Руна облика" src="/assets/crafts/rune.webp" width="40%"/>
+        <div class="rune-stack">
+          <img class="rune-tint" src="/assets/crafts/rune_overlay.webp" alt="" aria-hidden="true">
+          <img class="rune-base" src="/assets/crafts/rune.webp" alt="Руна облика">
+        </div>
     </template>
     <template #title>Руна облика</template>
     <template #content>
@@ -47,3 +51,37 @@ aside: false
 </ItemCard>
 
 Снимает облик и возвращает предмету изначальный вид. Работает так же — через кузнечный стол, и одна на все облики сразу.
+
+<style>
+/* Руна собрана из двух текстур: тёмное кольцо-основа поверх узора, который
+   в игре красится в цвет облика. Здесь узор вместо одного цвета медленно
+   перебирает радугу — sepia+saturate сначала даёт серому слою цвет,
+   иначе hue-rotate крутить нечего. */
+/* 128px, а не проценты: соседняя Антируна рисуется через <Image>, и та
+   держит натуральные 128px, игнорируя width="40%". Проценты давали 98px
+   и две руны разного размера. */
+.rune-stack {
+  position: relative;
+  width: 128px;
+  height: 128px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.rune-stack img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  image-rendering: pixelated;
+}
+.rune-tint {
+  animation: rune-rainbow 14s linear infinite;
+}
+@keyframes rune-rainbow {
+  from { filter: sepia(1) saturate(8) hue-rotate(0deg); }
+  to   { filter: sepia(1) saturate(8) hue-rotate(360deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .rune-tint { animation: none; filter: sepia(1) saturate(8) hue-rotate(180deg); }
+}
+</style>
