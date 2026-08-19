@@ -125,17 +125,17 @@ const columns = [
   position: absolute;
   left: 0;
   right: 0;
-  height: 70px;
+  height: 36px;
   z-index: 3;
   pointer-events: none;
 }
 .rv-fade--top {
   top: 0;
-  background: linear-gradient(to bottom, var(--vp-c-bg, #1b1b1f) 0%, transparent 100%);
+  background: linear-gradient(to bottom, rgba(27, 27, 31, 0.85) 0%, rgba(27, 27, 31, 0.35) 55%, transparent 100%);
 }
 .rv-fade--bot {
   bottom: 0;
-  background: linear-gradient(to top, var(--vp-c-bg, #1b1b1f) 0%, transparent 100%);
+  background: linear-gradient(to top, rgba(27, 27, 31, 0.85) 0%, rgba(27, 27, 31, 0.35) 55%, transparent 100%);
 }
 
 /* Column */
@@ -144,8 +144,11 @@ const columns = [
   overflow: hidden;
 }
 
-.rv-col:hover .rv-track {
-  animation-play-state: paused;
+/* Наведение на всю стену — стоят обе колонки.
+   !important обязателен: шорткат animation ниже тоже !important,
+   иначе он перебивает paused своим animation-play-state: running. */
+.rv-cols:hover .rv-track {
+  animation-play-state: paused !important;
 }
 
 /* Scrolling tracks */
@@ -218,6 +221,28 @@ const columns = [
   line-height: 1.65;
   color: #8b8a96;
   margin: 0;
+}
+
+/* Меньше движения — стена не едет, листается руками */
+@media (prefers-reduced-motion: reduce) {
+  .rv-track--up,
+  .rv-track--down {
+    animation: none !important;
+  }
+
+  .rv-fade {
+    display: none;
+  }
+
+  /* высота остаётся прежней (520px / 420px на мобиле), но внутри — скролл */
+  .rv-cols {
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+  }
+
+  .rv-col {
+    overflow: visible;
+  }
 }
 
 /* Responsive */
