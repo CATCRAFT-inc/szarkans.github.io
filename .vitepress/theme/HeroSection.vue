@@ -381,6 +381,11 @@ onMounted(async () => {
   color: #fff;
 }
 
+.hero-btn--primary:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 2px;
+}
+
 .hero-btn--secondary {
   background: rgba(255, 255, 255, 0.06);
   color: #d0d0e0;
@@ -408,7 +413,7 @@ onMounted(async () => {
     max-width: 95%;
   }
   .hero-title {
-    font-size: 3rem;
+    font-size: clamp(2rem, 11vw, 3rem);
     width: 100%;
   }
   .hero-subtitle {

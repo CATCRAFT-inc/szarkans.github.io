@@ -187,6 +187,11 @@ function toggle(index) {
   background-color: hsla(var(--md-hue),15%,18%,1);
 }
 
+.dropdown-title:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 2px;
+}
+
 /* Элемент с контентом дропдауна — анимация по строке грида (0fr → 1fr) */
 .dropdown-content {
   display: grid;

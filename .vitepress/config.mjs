@@ -362,7 +362,7 @@ export default defineConfig({
                 noResultsText: 'Ничего не найдено для',
                 footer: {
                   selectText: 'выбор',
-                  selectKeyAriaLabel: '输入',
+                  selectKeyAriaLabel: 'выбрать',
                   navigateText: 'навигация',
                   navigateUpKeyAriaLabel: 'Наверх',
                   navigateDownKeyAriaLabel: 'Вниз',
@@ -401,7 +401,7 @@ export default defineConfig({
     returnToTopLabel: 'Вернуться к началу',
     langMenuLabel: 'Изменить язык',
     nav: [
-      { text: 'Начать играть', link: '/info/faq' },
+      { text: 'Начать играть', link: '/info/guide' },
       { text: 'Механики', link: '/gameplay/main' },
       { text: 'Бестиарий', link: '/bestiary/main.md' },
       // activeMatch: иначе пункт подсвечен только на самом хабе — VitePress
