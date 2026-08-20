@@ -185,19 +185,19 @@ const seasons = computed(() =>
   font-size: clamp(1.8rem, 4vw, 2.8rem);
   line-height: 1.2;
   letter-spacing: -0.03em;
-  color: #e8e7f0;
+  color: var(--cc-text-1);
   margin: 0 0 16px;
 }
 
 .hist__intro {
   max-width: 700px;
-  color: #8b8a96;
+  color: var(--cc-text-2);
   line-height: 1.7;
 }
 
 .hist__intro :deep(p) { margin: 0; }
-.hist__intro :deep(.white) { color: #e8e7f0; font-weight: 600; }
-.hist__intro :deep(.gold) { color: #f5a623; }
+.hist__intro :deep(.white) { color: var(--cc-text-1); font-weight: 600; }
+.hist__intro :deep(.gold) { color: var(--cc-ember); }
 
 .hist__list {
   list-style: none;
@@ -238,12 +238,12 @@ const seasons = computed(() =>
   width: 9px;
   height: 9px;
   transform: rotate(45deg);
-  background: #a78bfa;
+  background: var(--cc-purple-400);
   box-shadow: 0 0 12px rgba(167, 139, 250, 0.7);
 }
 
 .hist__node--live {
-  background: #4ade80;
+  background: var(--cc-ok);
   box-shadow: 0 0 10px rgba(74, 222, 128, 0.8);
   animation: hist-pulse 2.4s ease-in-out infinite;
 }
@@ -299,7 +299,7 @@ const seasons = computed(() =>
 }
 
 .hs__go:focus-visible {
-  outline: 2px solid #a78bfa;
+  outline: 2px solid var(--cc-purple-400);
   outline-offset: -4px;
 }
 
@@ -326,7 +326,7 @@ const seasons = computed(() =>
   font-size: clamp(1.8rem, 4vw, 2.8rem);
   line-height: 1;
   letter-spacing: -0.05em;
-  color: #c4b5fd;
+  color: var(--cc-purple-300);
   display: flex;
   align-items: baseline;
   gap: 8px;
@@ -338,23 +338,23 @@ const seasons = computed(() =>
   font-weight: 500;
   font-size: 0.85rem;
   letter-spacing: 0;
-  color: #6b6a78;
+  color: var(--cc-text-3);
 }
 
 .hs__dates {
   margin: 6px 0 0;
   font-size: 1rem;
-  color: #e8e7f0;
+  color: var(--cc-text-1);
   font-variant-numeric: tabular-nums;
 }
 
 .hs__sub {
   margin: 2px 0 0;
   font-size: 0.85rem;
-  color: #6b6a78;
+  color: var(--cc-text-3);
 }
 
-.hs__sub em { font-style: normal; color: #a78bfa; }
+.hs__sub em { font-style: normal; color: var(--cc-purple-400); }
 .hs__dot { margin: 0 6px; }
 
 /* Та же точка статуса, что в строке онлайна на лендинге. */
@@ -363,7 +363,7 @@ const seasons = computed(() =>
   align-items: center;
   gap: 8px;
   margin-left: 10px;
-  color: #4ade80;
+  color: var(--cc-ok);
 }
 
 .hs__live::before {
@@ -400,7 +400,7 @@ const seasons = computed(() =>
   border: 1px solid rgba(167, 139, 250, 0.24);
   background: rgba(16, 17, 20, 0.5);
   font-size: 0.85rem;
-  color: #c4b5fd;
+  color: var(--cc-purple-300);
   text-decoration: none;
   white-space: nowrap;
   transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
@@ -410,21 +410,21 @@ const seasons = computed(() =>
 .hs__chip:focus-visible {
   background: rgba(124, 58, 237, 0.18);
   border-color: rgba(167, 139, 250, 0.55);
-  color: #e8e7f0;
+  color: var(--cc-text-1);
 }
 
 .hs__chip:focus-visible {
-  outline: 2px solid #a78bfa;
+  outline: 2px solid var(--cc-purple-400);
   outline-offset: 2px;
 }
 
 .hs__chip b {
   font-weight: 500;
-  color: #6b6a78;
+  color: var(--cc-text-3);
   font-variant-numeric: tabular-nums;
 }
 
-.hs__chip:hover b { color: #a78bfa; }
+.hs__chip:hover b { color: var(--cc-purple-400); }
 
 /* «Статья» — подпись, а не кнопка: своего наведения у неё нет, она
    загорается вместе со всей карточкой, потому что карточка и есть эта кнопка.
@@ -434,7 +434,7 @@ const seasons = computed(() =>
 .hs:hover .hs__chip--ghost {
   background: rgba(124, 58, 237, 0.18);
   border-color: rgba(167, 139, 250, 0.55);
-  color: #e8e7f0;
+  color: var(--cc-text-1);
 }
 
 /* --- сезон, которого не было ---------------------------------------------- */
@@ -453,7 +453,7 @@ const seasons = computed(() =>
   user-select: none;
 }
 
-.hs--redacted .hs__sub { color: #e8a0bf; }
+.hs--redacted .hs__sub { color: var(--cc-blush); }
 
 /* --- сезон, который идёт --------------------------------------------------- */
 .hs--current {
@@ -465,7 +465,7 @@ const seasons = computed(() =>
     rgba(255, 255, 255, 0.02);
 }
 
-.hs--current .hs__num { color: #e8e7f0; }
+.hs--current .hs__num { color: var(--cc-text-1); }
 .hs--current .hs__body { max-width: 100%; }
 
 /* --- телефон --------------------------------------------------------------- */

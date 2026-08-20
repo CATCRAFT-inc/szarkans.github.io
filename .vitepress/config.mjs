@@ -345,6 +345,7 @@ export default defineConfig({
     }
   },
   themeConfig: {
+    skipToContentLabel: 'К содержанию',
     search: {
       provider: 'local',
       options: {
@@ -401,14 +402,11 @@ export default defineConfig({
     returnToTopLabel: 'Вернуться к началу',
     langMenuLabel: 'Изменить язык',
     nav: [
-      { text: 'Начать играть', link: '/info/guide' },
-      { text: 'Механики', link: '/gameplay/main' },
-      { text: 'Бестиарий', link: '/bestiary/main.md' },
-      // activeMatch: иначе пункт подсвечен только на самом хабе — VitePress
-      // сравнивает путь точно. Раздел из шестнадцати страниц выглядел бы
-      // так, будто игрок в нём не находится.
       { text: 'История', link: '/history/', activeMatch: '^/history/' },
-      { text: 'Обновления', link: '/updates/8season/8_0_4.md' }
+      { text: 'Обновления', link: '/updates/8season/8_0_4', activeMatch: '^/updates/' },
+      { text: 'Карта мира', link: 'https://map.catcraft.ru' },
+      { text: 'Discord', link: 'https://discord.gg/6f3FwFRJWC' },
+      { text: 'Telegram', link: 'https://t.me/catcraftmc_tg' }
     ],
 
     socialLinks: [

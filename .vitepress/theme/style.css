@@ -1,6 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=Unbounded:wght@400;500;600;700;800;900&display=swap');
 
 :root {
+  /* Базовая палитра VitePress в тех же тонах, что и главная 2a. */
+  --vp-c-bg: #15121c;
+  --vp-c-bg-alt: #12101a;
+  --vp-c-bg-soft: #1c1826;
+  --vp-c-bg-elv: #1c1826;
+  --vp-c-divider: rgba(255,255,255,.08);
+  --vp-c-gutter: rgba(255,255,255,.06);
+  --vp-c-text-1: #e8e7f0;
+  --vp-c-text-2: #9a94ab;
+  --vp-c-text-3: #8f87a3;
+
   --vp-c-default-1: var(--vp-c-gray-1);
   --vp-c-default-2: var(--vp-c-gray-2);
   --vp-c-default-3: var(--vp-c-gray-3);
@@ -29,6 +40,61 @@
   --cc-main: #4f2dbe;
   --cc-black: #101114;
   --cc-white: #f5f5f5;
+  --cc-purple-300: #bd96ff;
+  --cc-purple-400: #a67cf5;
+  --cc-purple-700: #4f2dbe;
+  --cc-surface-3: #25202f;
+  --cc-text-1: #e8e7f0;
+  --cc-text-2: #9a94ab;
+  --cc-text-3: #605a72;
+  --cc-on-brand: #ffffff;
+  --cc-ember: #f5a623;
+  --cc-blush: #e8a0bf;
+  --cc-ok: #4ade80;
+}
+
+.cc-pill {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 20px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: linear-gradient(#0f0d14,#0f0d14) padding-box,linear-gradient(120deg,#8758f3,#4f2dbe 60%,#2d52be) border-box;
+  color: #e8e7f0;
+  font-size: 14.5px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: .18s;
+}
+
+.cc-pill img {
+  width: auto;
+  height: 13px;
+  opacity: .75;
+  transition: opacity .18s;
+}
+
+.cc-pill:hover {
+  background: linear-gradient(120deg,#8758f3,#4f2dbe) border-box;
+  color: #fff;
+  box-shadow: 0 0 22px rgba(135,88,243,.4);
+  text-decoration: none;
+}
+
+.cc-pill:hover img {
+  opacity: 1;
+}
+
+.cc-primary-button {
+  background: #4f2dbe;
+  box-shadow: 0 0 24px rgba(79,45,190,.45);
+}
+
+.cc-primary-button:hover {
+  background: #5c35d4;
+  color: #fff;
 }
 
 /**
@@ -59,7 +125,30 @@
   padding-top: 0 !important;
 }
 
+.VPContent.is-home {
+  background-color: #15121c;
+  background-image:
+    radial-gradient(ellipse 900px 500px at 85% -10%, rgba(79,45,190,.20), transparent 70%),
+    radial-gradient(ellipse 700px 500px at 0% 100%, rgba(45,82,190,.08), transparent 70%);
+}
+
+.VPHome .vp-doc.container { max-width:1328px; padding:36px 64px 72px; }
+.VPHome .vp-doc.container > div > div { display:flex; flex-direction:column; gap:44px; max-width:1200px; margin:0 auto; font-family:'Rubik',sans-serif; color:#e8e7f0; }
+.VPHome .vp-doc.container > div > div > * { margin:0; }
+
+.VPNavBarTitle .title { font-family:'Unbounded',sans-serif; font-size:18px; font-weight:800; }
+.VPNavBarMenuLink { color:#9a94ab!important; font:500 15px 'Rubik',sans-serif!important; }
+.VPNavBarMenuLink:hover { color:#fff!important; }
+.VPNavBarMenuLink:nth-last-child(-n+2) { color:#c4b5fd!important; font-weight:600!important; }
+body:has(.VPHome) .VPNavBar { border-bottom:1px solid rgba(255,255,255,.07); }
+@media (max-width:700px) { .VPHome .vp-doc.container { padding:28px 20px 56px; } }
+
 .vp-doc.container > .content > .content-container {
+  max-width: 100%;
+}
+
+.vp-doc table {
+  width: max-content;
   max-width: 100%;
 }
 
@@ -73,12 +162,7 @@
 /* Бургер на телефоне */
 /*  */
 .VPNavScreen {
-  border-bottom: 5px solid #242424;
-}
-
-/* Home page section headings glow */
-.is-home h1 {
-  text-shadow: 0 0 20px rgba(135, 88, 243, 0.2);
+  border-bottom: 5px solid var(--cc-surface-3);
 }
 
 /**
@@ -311,13 +395,15 @@ strong {
    включая aside (DocAside), без обрезов.
    ============================================= */
 
-.VPContent:has(.VPDoc) {
+.VPContent:has(.VPDoc),
+.VPContent:has(.VPPage) {
   background-image:
     radial-gradient(ellipse 700px 600px at 87% 5%,  rgba(79, 45, 190, 0.13) 0%, transparent 70%),
     radial-gradient(ellipse 600px 500px at 3%  76%,  rgba(45, 82, 190, 0.09) 0%, transparent 70%),
     radial-gradient(ellipse 500px 450px at 93% 94%,  rgba(110, 61, 206, 0.07) 0%, transparent 70%);
   background-attachment: fixed;
 }
+
 /* =============================================
    Дорога назад в хаб раздела («← Все сезоны»)
    Красим в покое, а не по наведению: в цвете
@@ -328,10 +414,10 @@ strong {
    ============================================= */
 
 .VPSidebarItem .text .sidebar-back {
-  color: #c4b5fd;
+  color: var(--cc-purple-300);
 }
 
 .VPSidebarItem .link:hover .text .sidebar-back,
 .VPSidebarItem .link:focus-visible .text .sidebar-back {
-  color: #e8e7f0;
+  color: var(--cc-text-1);
 }

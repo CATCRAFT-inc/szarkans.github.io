@@ -141,7 +141,7 @@ watch(currentIndex, async () => {
 }
 
 .adhd-popup__yes {
-  background: #4f2dbe;
+  background: var(--cc-purple-700);
   color: #fff;
   box-shadow: 0 0 12px rgba(79, 45, 190, 0.5);
 }

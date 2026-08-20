@@ -212,8 +212,8 @@
 }
 
 .nf-btn--primary {
-  background: var(--cc-main, #4f2dbe);
-  color: #fff;
+  background: var(--cc-main, var(--cc-purple-700));
+  color: var(--cc-on-brand);
   box-shadow:
     0 0 20px rgba(79, 45, 190, 0.4),
     0 4px 15px rgba(79, 45, 190, 0.3);
@@ -224,7 +224,7 @@
     0 0 30px rgba(79, 45, 190, 0.6),
     0 6px 20px rgba(79, 45, 190, 0.4);
   transform: translateY(-2px);
-  color: #fff;
+  color: var(--cc-on-brand);
 }
 
 .nf-btn--secondary {

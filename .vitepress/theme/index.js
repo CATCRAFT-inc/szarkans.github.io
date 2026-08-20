@@ -54,8 +54,6 @@ import HomeFaq from './HomeFaq.vue';
 import Album from './Album.vue';
 import HeroSection from './HeroSection.vue';
 import HomeCta from './HomeCta.vue';
-import MarqueeStrip from './MarqueeStrip.vue';
-import BentoFeatures from './BentoFeatures.vue';
 import ReviewWall from './ReviewWall.vue';
 import NotFound from './NotFound.vue';
 import AdhdMode from './AdhdMode.vue';
@@ -63,6 +61,8 @@ import Obfuscated from './Obfuscated.vue';
 import GlitchBlock from './GlitchBlock.vue';
 import WikiIndex from './WikiIndex.vue';
 import HistoryTimeline from './HistoryTimeline.vue';
+import WikiHub from './WikiHub.vue';
+import WhatsNew from './WhatsNew.vue';
 //
 
 import VueEasyLightbox from 'vue-easy-lightbox';
@@ -169,14 +169,14 @@ export default {
     app.component('CraftingGrid', CraftingGrid);
     app.component('HeroSection', HeroSection);
     app.component('HomeCta', HomeCta);
-    app.component('MarqueeStrip', MarqueeStrip);
-    app.component('BentoFeatures', BentoFeatures);
     app.component('ReviewWall', ReviewWall);
     app.component('AdhdMode', AdhdMode);
     app.component('Obfuscated', Obfuscated);
     app.component('GlitchBlock', GlitchBlock);
     app.component('WikiIndex', WikiIndex);
     app.component('HistoryTimeline', HistoryTimeline);
+    app.component('WikiHub', WikiHub);
+    app.component('WhatsNew', WhatsNew);
     //
     app.directive('tooltip', Tooltip);
   }
