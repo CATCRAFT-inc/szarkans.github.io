@@ -139,13 +139,13 @@ onMounted(() => {
   font-size: clamp(1.8rem, 4vw, 2.8rem);
   line-height: 1.2;
   letter-spacing: -0.03em;
-  color: #e8e7f0;
+  color: var(--cc-text-1);
   margin: 0 0 16px;
 }
 
 .wiki-index__intro {
   max-width: 700px;
-  color: #8b8a96;
+  color: var(--cc-text-2);
   line-height: 1.7;
 }
 
@@ -154,12 +154,12 @@ onMounted(() => {
 }
 
 .wiki-index__intro :deep(.white) {
-  color: #e8e7f0;
+  color: var(--cc-text-1);
   font-weight: 600;
 }
 
 .wiki-index__intro :deep(.gold) {
-  color: #f5a623;
+  color: var(--cc-ember);
 }
 
 /* КЛАДКА, а не сетка из равных ячеек.
@@ -251,7 +251,7 @@ onMounted(() => {
   flex: none;
   width: 20px;
   height: 20px;
-  color: #a78bfa;
+  color: var(--cc-purple-400);
   transition: transform 0.18s ease;
 }
 
@@ -260,7 +260,7 @@ onMounted(() => {
 }
 
 .wi-feat:focus-visible {
-  outline: 2px solid #a78bfa;
+  outline: 2px solid var(--cc-purple-400);
   outline-offset: 2px;
 }
 
@@ -270,17 +270,17 @@ onMounted(() => {
   font-size: 1.2rem;
   line-height: 1.3;
   letter-spacing: -0.02em;
-  color: #e8e7f0;
+  color: var(--cc-text-1);
 }
 
 .wi-feat:hover .wi-feat__name {
-  color: #c4b5fd;
+  color: var(--cc-purple-300);
 }
 
 .wi-feat__blurb {
   font-size: 0.85rem;
   line-height: 1.4;
-  color: #8b8a96;
+  color: var(--cc-text-2);
 }
 
 .wi-panel__title {
@@ -318,7 +318,7 @@ onMounted(() => {
   /* Лавандовый в ПОКОЕ, а не только на наведении: пока ссылка цвета обычного
      текста, она и читается как текст. На телефоне hover'а нет вовсе, там это
      был единственный сигнал «сюда можно ткнуть» — то есть никакого. */
-  color: #c4b5fd;
+  color: var(--cc-purple-300);
   font-size: 1rem;
   line-height: 1.4;
   text-decoration: none;
@@ -328,7 +328,7 @@ onMounted(() => {
 .wi-link:hover,
 .wi-link:focus-visible {
   background: rgba(124, 58, 237, 0.16);
-  color: #e8e7f0;
+  color: var(--cc-text-1);
   text-decoration: underline;
   text-underline-offset: 3px;
   text-decoration-color: rgba(167, 139, 250, 0.6);
@@ -336,7 +336,7 @@ onMounted(() => {
 }
 
 .wi-link:focus-visible {
-  outline: 2px solid #a78bfa;
+  outline: 2px solid var(--cc-purple-400);
   outline-offset: 1px;
 }
 

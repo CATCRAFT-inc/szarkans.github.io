@@ -54,8 +54,6 @@ import HomeFaq from './HomeFaq.vue';
 import Album from './Album.vue';
 import HeroSection from './HeroSection.vue';
 import HomeCta from './HomeCta.vue';
-import MarqueeStrip from './MarqueeStrip.vue';
-import BentoFeatures from './BentoFeatures.vue';
 import ReviewWall from './ReviewWall.vue';
 import NotFound from './NotFound.vue';
 import AdhdMode from './AdhdMode.vue';
@@ -63,6 +61,8 @@ import Obfuscated from './Obfuscated.vue';
 import GlitchBlock from './GlitchBlock.vue';
 import WikiIndex from './WikiIndex.vue';
 import HistoryTimeline from './HistoryTimeline.vue';
+import WikiHub from './WikiHub.vue';
+import WhatsNew from './WhatsNew.vue';
 //
 
 import VueEasyLightbox from 'vue-easy-lightbox';
@@ -73,8 +73,45 @@ import ItemPageLayout from './ItemPageLayout.vue';
 import googleAnalytics from 'vitepress-plugin-google-analytics';
 
 import Aura from '@primevue/themes/aura';
+import { definePreset } from '@primevue/themes';
 import './style.css';
 import CraftingGrid from './CraftingGrid.vue';
+
+const SzarkansPreset = definePreset(Aura, {
+  semantic: {
+    primary: {
+      50: '#f5f0ff',
+      100: '#e9ddff',
+      200: '#d5bcff',
+      300: '#bd96ff',
+      400: '#a67cf5',
+      500: '#8b5ee8',
+      600: '#7043d4',
+      700: '#4f2dbe',
+      800: '#42269d',
+      900: '#37227f',
+      950: '#21134f'
+    },
+    colorScheme: {
+      dark: {
+        surface: {
+          0: '#f5f5f5',
+          50: '#ededf0',
+          100: '#d9d9de',
+          200: '#b8b9c0',
+          300: '#9798a2',
+          400: '#777883',
+          500: '#5b5c66',
+          600: '#44454e',
+          700: '#303139',
+          800: '#25262d',
+          900: '#1e1f26',
+          950: '#17181d'
+        }
+      }
+    }
+  }
+});
 
 /** @type {import('vitepress').Theme} */
 export default {
@@ -88,7 +125,10 @@ export default {
   enhanceApp({ app, router, siteData }) {
     app.use(PrimeVue, {
       theme: {
-        preset: Aura
+        preset: SzarkansPreset,
+        options: {
+          darkModeSelector: '.dark'
+        }
       }
     }); // Инициализируем PrimeVue
     app.use(googleAnalytics({ id: 'G-X3KCR2ZW65' }));
@@ -129,14 +169,14 @@ export default {
     app.component('CraftingGrid', CraftingGrid);
     app.component('HeroSection', HeroSection);
     app.component('HomeCta', HomeCta);
-    app.component('MarqueeStrip', MarqueeStrip);
-    app.component('BentoFeatures', BentoFeatures);
     app.component('ReviewWall', ReviewWall);
     app.component('AdhdMode', AdhdMode);
     app.component('Obfuscated', Obfuscated);
     app.component('GlitchBlock', GlitchBlock);
     app.component('WikiIndex', WikiIndex);
     app.component('HistoryTimeline', HistoryTimeline);
+    app.component('WikiHub', WikiHub);
+    app.component('WhatsNew', WhatsNew);
     //
     app.directive('tooltip', Tooltip);
   }

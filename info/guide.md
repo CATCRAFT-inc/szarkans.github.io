@@ -11,6 +11,8 @@ aside: false
 
 `play.catcraft.org` - запасной, если основной не открывается
 
+`play.catcraftmc.ru` - ещё один запасной
+
 Мы играем на **1.21.11 Java**!
 :::
 

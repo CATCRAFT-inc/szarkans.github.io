@@ -80,14 +80,14 @@ const doubled = [...players, ...players]
 
 .marquee__item span {
   font-size: 0.88rem;
-  color: #6b6a78;
+  color: var(--cc-text-3);
   white-space: nowrap;
   font-weight: 500;
   transition: color 0.2s;
 }
 
 .marquee__item:hover span {
-  color: #a78bfa;
+  color: var(--cc-purple-400);
 }
 
 @keyframes scroll {
