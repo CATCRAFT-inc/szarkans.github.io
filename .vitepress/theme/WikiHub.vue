@@ -3,7 +3,8 @@
     <header class="wiki-hub__head">
       <span>Вся вики</span>
       <button class="hub-search" type="button" aria-label="Открыть поиск по вики" @click="openSearch">
-        <span>как приручить мурку, рыбалка, кувалда…</span>
+        <span>Поиск</span>
+        <svg class="hub-search__lens" viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><circle cx="7" cy="7" r="4.6" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10.4 10.4 14 14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
         <kbd>Ctrl K</kbd>
       </button>
     </header>
@@ -21,7 +22,7 @@
           <a v-for="item in visibleItems(group, MECHANICS_CAP, mechanicsUncapped)" :key="item.link" class="hub-row" :href="hrefOf(item.link)">
             <img v-if="item.icon" :src="withBase(item.icon)" alt="" /><span>{{ item.text }}</span>
           </a>
-          <button v-if="hiddenCount(group, MECHANICS_CAP, mechanicsUncapped)" class="hub-expand" type="button" :aria-expanded="isExpanded(group)" @click="toggleGroup(group)">
+          <button v-if="hiddenCount(group, MECHANICS_CAP, mechanicsUncapped)" class="hub-chip hub-chip--more" type="button" :aria-expanded="isExpanded(group)" @click="toggleGroup(group)">
             <span class="hub-expand__chevron" :class="{ 'is-open': isExpanded(group) }">▸</span>
             {{ isExpanded(group) ? 'свернуть' : `ещё ${hiddenCount(group, MECHANICS_CAP, mechanicsUncapped)}` }}
           </button>
@@ -140,7 +141,8 @@ function openSearch() {
 .wiki-hub__head > span,.wiki-hub h2 { color:#c4b5fd; font-size:12px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; }
 .hub-search { display:flex; flex:1; align-items:center; justify-content:space-between; gap:16px; min-width:0; padding:11px 12px 11px 16px; border:1px solid rgba(255,255,255,.1); border-radius:10px; outline:0; background:#0f0d14; color:#9a94ab; font:15px 'Rubik',sans-serif; text-align:left; cursor:pointer; }
 .hub-search:hover,.hub-search:focus-visible { border-color:#8758f3; color:#c9c4d8; }
-.hub-search > span { flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.hub-search > span { flex:0 1 auto; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.hub-search__lens { flex:0 0 auto; margin-right:auto; opacity:.75; }
 .hub-search kbd { flex:0 0 auto; padding:3px 7px; border:1px solid rgba(255,255,255,.1); border-radius:6px; background:rgba(255,255,255,.04); color:#605a72; font:500 11px 'Rubik',sans-serif; white-space:nowrap; }
 .wiki-hub__body { display:grid; grid-template-columns:1fr 1.1fr 1.3fr; gap:36px; padding:26px 32px 30px; }
 .wiki-hub h2 { margin:0; border:0; color:#7c3aed; font-family:'Rubik',sans-serif; }
@@ -153,8 +155,7 @@ function openSearch() {
 .hub-group h3 { margin:0 0 4px; border:0; color:#605a72; font:600 12.5px/1.4 'Rubik',sans-serif; }
 .hub-row { display:flex; align-items:center; gap:9px; padding-block:4px; }
 .hub-row img,.hub-chip img { width:20px; height:20px; object-fit:contain; image-rendering:pixelated; }
-.hub-expand { display:flex; align-items:center; align-self:stretch; gap:6px; padding:5px 8px; border:0; border-radius:8px; background:transparent; color:var(--cc-text-2); font:13px 'Rubik',sans-serif; text-align:left; cursor:pointer; }
-.hub-expand:hover { color:#a67cf5; }
+.hub-group:not(.hub-group--chips) .hub-chip--more { align-self:flex-start; margin-top:6px; }
 .hub-expand__chevron { display:inline-block; transition:transform .2s ease; }
 .hub-expand__chevron.is-open { transform:rotate(90deg); }
 .hub-group--chips { gap:8px; }
@@ -164,11 +165,11 @@ function openSearch() {
 .hub-chip:hover { border-color:#8758f3; color:#fff; }
 .hub-chip--more { padding-inline:14px; border-style:dashed; border-color:rgba(166,124,245,.4); background:transparent; color:#a67cf5; cursor:pointer; }
 .hub-exits { display:flex; flex-wrap:wrap; justify-content:center; gap:14px; margin:0 32px 30px; padding-top:24px; border-top:1px solid rgba(255,255,255,.06); }
-.hub-exit { max-width:100%; min-height:44px; color:#e8e7f0!important; text-decoration:none!important; }
+.hub-exit { max-width:100%; min-height:44px; }
 .hub-exit__arrow { color:#a67cf5; transition:color .18s,transform .18s; }
 .hub-exit:hover { color:#fff!important; }
 .hub-exit:hover .hub-exit__arrow { color:#fff; transform:translateX(3px); }
 @media (max-width:900px) { .wiki-hub__body { grid-template-columns:1fr 1fr; } .hub-start { grid-column:1/-1; } }
-@media (max-width:760px) { .wiki-hub__head { align-items:stretch; flex-direction:column; padding:18px 20px; } .hub-search { width:100%; min-height:44px; } .wiki-hub__body { grid-template-columns:minmax(0,1fr); padding:24px 20px; } .hub-start { grid-column:auto; } .hub-start a,.hub-row,.hub-chip,.hub-expand,.hub-exit { min-height:42px; } .hub-start a { display:flex; align-items:center; } .hub-row { padding-block:9px; } .hub-chip { padding-block:11px; } .hub-expand,.hub-chip--more { padding-block:9px; font-size:14px; } .hub-exits { margin:0 20px 24px; } }
+@media (max-width:760px) { .wiki-hub__head { align-items:stretch; flex-direction:column; padding:18px 20px; } .hub-search { width:100%; min-height:44px; } .wiki-hub__body { grid-template-columns:minmax(0,1fr); padding:24px 20px; } .hub-start { grid-column:auto; } .hub-start a,.hub-row,.hub-chip,.hub-exit { min-height:42px; } .hub-start a { display:flex; align-items:center; } .hub-row { padding-block:9px; } .hub-chip { padding-block:11px; } .hub-chip--more { padding-block:9px; font-size:14px; } .hub-exits { margin:0 20px 24px; } }
 @media (pointer:coarse) { .hub-search kbd { display:none; } }
 </style>

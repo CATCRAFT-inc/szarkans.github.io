@@ -62,10 +62,10 @@
   border: 1px solid transparent;
   border-radius: 999px;
   background: linear-gradient(#0f0d14,#0f0d14) padding-box,linear-gradient(120deg,#8758f3,#4f2dbe 60%,#2d52be) border-box;
-  color: #e8e7f0;
+  color: #e8e7f0 !important;
   font-size: 14.5px;
   font-weight: 600;
-  text-decoration: none;
+  text-decoration: none !important;
   transition: .18s;
 }
 
@@ -78,7 +78,7 @@
 
 .cc-pill:hover {
   background: linear-gradient(120deg,#8758f3,#4f2dbe) border-box;
-  color: #fff;
+  color: #fff !important;
   box-shadow: 0 0 22px rgba(135,88,243,.4);
   text-decoration: none;
 }
