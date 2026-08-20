@@ -75,7 +75,7 @@ const mailboxRecipe = [
 
 const mailboxResult = {
   image: '/assets/crafts/mailbox.webp',
-  name: 'Почтовый ящик',
+  name: 'Камера хранения',
   count: 1
 }
 
@@ -87,7 +87,7 @@ const smallMailboxRecipe = [
 
 const smallMailboxResult = {
   image: '/assets/crafts/small_mailbox.webp',
-  name: 'Малый почтовый ящик',
+  name: 'Почтовый ящик',
   count: 1
 }
 </script>
