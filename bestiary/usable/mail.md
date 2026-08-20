@@ -9,7 +9,7 @@ description: Почтовый ящик, колокольчик и посылка
 
 Полноценное описание механики есть [на странице почты](/gameplay/unique/mail.md)
 
-## Почтовый ящик
+## Камера хранения
 
 <ItemCard>
 <Card style="overflow: hidden;" class="m-0">
@@ -34,7 +34,7 @@ description: Почтовый ящик, колокольчик и посылка
   :result="mailboxResult"
 />
 
-# Почтовый ящик
+### Почтовый ящик
 
 <ItemCard>
 <Card style="overflow: hidden;" class="m-0">
