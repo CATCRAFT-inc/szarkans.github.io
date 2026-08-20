@@ -14,7 +14,7 @@ description: Почтовый ящик, колокольчик и посылка
 <ItemCard>
 <Card style="overflow: hidden;" class="m-0">
     <template #header>
-        <Image alt="Почтовый ящик" src="/assets/crafts/mailbox.webp" width="40%"/>
+        <Image alt="Камера хранения" src="/assets/crafts/mailbox.webp" width="40%"/>
     </template>
     <template #title>Камера хранения</template>
     <template #content>
@@ -26,6 +26,15 @@ description: Почтовый ящик, колокольчик и посылка
     </template>
 </Card>
 </ItemCard>
+
+Поставленный ящик регистрирует твой адрес в почтовой системе и хранит всё, что тебе пришло. Открыть его можешь только ты.
+
+<CraftingGrid
+  :ingredients="mailboxRecipe"
+  :result="mailboxResult"
+/>
+
+# Почтовый ящик
 
 <ItemCard>
 <Card style="overflow: hidden;" class="m-0">
@@ -43,12 +52,7 @@ description: Почтовый ящик, колокольчик и посылка
 </Card>
 </ItemCard>
 
-Поставленный ящик регистрирует твой адрес в почтовой системе и хранит всё, что тебе пришло. Открыть его можешь только ты. Ящиков есть два вида, но они отличаются только внешним видом.
-
-<CraftingGrid
-  :ingredients="mailboxRecipe"
-  :result="mailboxResult"
-/>
+Ящиков есть два вида, но они отличаются только внешним видом.
 
 <CraftingGrid
   :ingredients="smallMailboxRecipe"
