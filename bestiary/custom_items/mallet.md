@@ -32,15 +32,15 @@ description: Киянка - поворачивает блоки и меняет 
 <CardGrid>
 <Card style="overflow: hidden;" class="m-0">
     <template #header>
-        <Image alt="Покатушки на крюке-кошки" src="/assets/bestiary/items/mallet_hit.gif" preview />
+        <Image alt="Изменение забора киянкой" src="/assets/bestiary/items/mallet_hit.gif" preview />
     </template>
-    <template #subtitle>Покатушки</template>
+    <template #subtitle>Изменение забора</template>
 </Card>
 <Card style="overflow: hidden;" class="m-0">
     <template #header>
-        <Image alt="Крутой захват игрока крюком-кошкой" src="/assets/bestiary/items/mallet_rotate.gif" preview />
+        <Image alt="Вращение блоков киянкой" src="/assets/bestiary/items/mallet_rotate.gif" preview />
     </template>
-    <template #subtitle>Пример захвата игрока крюком</template>
+    <template #subtitle>Вращение блоков</template>
 </Card>
 </CardGrid>
 
