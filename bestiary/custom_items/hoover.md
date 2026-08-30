@@ -29,7 +29,7 @@ aside: false
     <template #header>
         <Image alt="Использование пылесоса" src="/assets/bestiary/items/hoover_break.gif" preview />
     </template>
-    <template #subtitle>Пример захвата игрока крюком</template>
+    <template #subtitle>Использование пылесоса</template>
 </Card>
 </CardGrid>
 
