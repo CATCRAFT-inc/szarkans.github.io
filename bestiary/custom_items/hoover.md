@@ -3,7 +3,7 @@ aside: false
 ---
 
 # Пылесос
-
+---
 <ItemCard>
 <Card style="overflow: hidden;" class="m-0">
     <template #header>
@@ -20,9 +20,21 @@ aside: false
 </Card>
 </ItemCard>
 
-Сносит траву, снег и прочую мелочь пачками, а лежащие под ногами предметы затягивает прямо в инвентарь.
+При вскопке нетвёрдого блока <span class="gray">(трава, снег, коврики)</span>, пылесос затягивает за собой соседние нетвёрдые блоки в радиусе 1 блока. Прямо в инвентарь.
 
-### Крафт
+Зажав `ПКМ` пылесос начнёт засасывать в инвентарь игрока предметы, лежащие на земле.
+
+<CardGrid>
+<Card style="overflow: hidden;" class="m-0">
+    <template #header>
+        <Image alt="Использование пылесоса" src="/assets/bestiary/items/hoover_break.gif" preview />
+    </template>
+    <template #subtitle>Пример захвата игрока крюком</template>
+</Card>
+</CardGrid>
+
+## Получение
+---
 
 <CraftingGrid
   :ingredients="hooverRecipe"

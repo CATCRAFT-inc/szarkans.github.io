@@ -7,7 +7,7 @@ aside: false
 Три предмета, с которых начинается [рисование](/gameplay/unique/artmap) на сервере. Все крафтятся на обычном верстаке.
 
 ## Мольберт
-
+---
 <ItemCard>
 <Card style="overflow: hidden;" class="m-0">
     <template #header>
@@ -24,7 +24,7 @@ aside: false
 </Card>
 </ItemCard>
 
-Ставится на землю, держит холст — твою будущую картину.
+Можно поставить на землю и размещать картину. Высота картины регулируется кликами `ПКМ`
 
 <CraftingGrid
   :ingredients="easelRecipe"
@@ -32,7 +32,7 @@ aside: false
 />
 
 ## Студия для рисования
-
+---
 <ItemCard>
 <Card style="overflow: hidden;" class="m-0">
     <template #header>
@@ -49,7 +49,7 @@ aside: false
 </Card>
 </ItemCard>
 
-Рабочее место художника: в студии ты выбираешь цвета и рисуешь.
+Рабочее место художника
 
 <CraftingGrid
   :ingredients="studioRecipe"
@@ -57,7 +57,7 @@ aside: false
 />
 
 ## Ведро краски
-
+---
 <ItemCard>
 <Card style="overflow: hidden;" class="m-0">
     <template #header>
@@ -74,7 +74,7 @@ aside: false
 </Card>
 </ItemCard>
 
-Хранит цвет, которым ты рисуешь. Собирается из любых трёх красителей — какие возьмёшь, такой и цвет.
+Может хранить цвет для будущего использования
 
 <CraftingGrid
   :ingredients="bucketRecipe"

@@ -4,7 +4,7 @@ description: Возвратная конфета - съел и оказался 
 ---
 
 # Возвратная конфета
-
+---
 <ItemCard>
 <Card style="overflow: hidden;" class="m-0">
     <template #header>
@@ -21,8 +21,17 @@ description: Возвратная конфета - съел и оказался 
 </Card>
 </ItemCard>
 
-Съел — и ты у своей кровати. Кровати нет — выкинет на спавн.
+Употребление конфетки телепортирует игрока на точку спавна. При отсутсвии [Котика+](/info/donate.md), результат непредсказуем.
 
-Приходит в ежедневном ките [Котика+](/info/donate.md), по две штуки за раз.
+## Получение
+---
+Приходит в ежедневной посылке каждому игроку с [Котик+](/info/donate.md).
 
-При отсутствии К+ приготовься к непредвиденным последствиям...
+<CardGrid>
+<Card style="overflow: hidden;" class="m-0">
+    <template #header>
+        <img alt="Возвратная конфетка в наборе Котик+" src="/assets/bestiary/items/candy_in_kit.webp" />
+    </template>
+    <template #subtitle>Возвратная конфетка в наборе Котик+</template>
+</Card>
+</CardGrid>

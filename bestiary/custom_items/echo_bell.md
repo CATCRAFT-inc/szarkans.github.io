@@ -16,16 +16,23 @@ aside: false
       <ul>
       <li>Крафт</li>
       </ul>
-      <Divider />
-      <p>Текстура: bykkake747</p>
     </template>
 </Card>
 </ItemCard>
 
-**Эхо-колокол** — подсвечивает всё живое и брошенное поблизости и помечает тёмные места, где заводятся монстры.
+Для удара в колокол нужно зажать `ПКМ` непродолжительно время, после чего отпустить. Волна эха разлетится во все стороны в радиусе **64** блоков, подсветив и подсчитав всех найденных живых существ.
 
-### Крафт
+Так же, колокол подсвечивает тёмные зоны, в которых могут спавниться злые мобы.
 
+<Card style="overflow: hidden;" class="m-0">
+    <template #header>
+        <Image alt="user header" src="/assets/bestiary/items/echo_bell_use.gif" width="100%"/>
+    </template>
+</Card>
+
+## Получение
+---
+Эхо-колокол можно скрафтить, обложив обычный колокол [Осколками эха](https://ru.minecraft.wiki/w/%D0%9E%D1%81%D0%BA%D0%BE%D0%BB%D0%BE%D0%BA_%D1%8D%D1%85%D0%B0)
 <CraftingGrid
   :ingredients="gunpowderRecipe"
   :result="gunpowderResult"
@@ -94,11 +101,3 @@ const gunpowderResult = {
   count: 1
 }
 </script>
-
-## Демонстрация
-
-<Card style="overflow: hidden;" class="m-0">
-    <template #header>
-        <Image alt="user header" src="/assets/bestiary/items/echo_bell_demo.gif" width="75%"/>
-    </template>
-</Card>

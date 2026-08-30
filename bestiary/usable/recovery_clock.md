@@ -4,7 +4,7 @@ description: Возвратные часы - отматывают стрелку
 ---
 
 # Возвратные часы
-
+---
 <ItemCard>
 <Card style="overflow: hidden;" class="m-0">
     <template #header>
@@ -21,11 +21,21 @@ description: Возвратные часы - отматывают стрелку
 </Card>
 </ItemCard>
 
-Одноразовые часы, которые отматывают тебя назад по твоим же следам. Дальше шестнадцати секунд не крутят.
+При зажатии `ПКМ` часы начинают отсчитывать секунды в прошлое, вплоть до **16**. После отпускания, игрока телепортирует туда, где он был указанное время назад.
 
-![Возвратные часы отматывают время назад](/assets/updates/8season/8_0_4/recovery_clock.gif)
+Часы одноразовые.
 
-### Крафт
+<CardGrid>
+<Card style="overflow: hidden;" class="m-0">
+    <template #header>
+        <img alt="Возвратные часы отматывают время назад" src="/assets/updates/8season/8_0_4/recovery_clock.gif" />
+    </template>
+    <template #subtitle>Демонстрация прыжка в прошлое</template>
+</Card>
+</CardGrid>
+
+## Получение
+---
 
 <CraftingGrid
   :ingredients="clockRecipe"
@@ -57,3 +67,7 @@ const clockResult = {
   count: 1
 }
 </script>
+
+## Интересные факты
+---
+- Использование часов награждает достижением **"Time Waits for No One"**

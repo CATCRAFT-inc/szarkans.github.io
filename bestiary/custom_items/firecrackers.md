@@ -7,7 +7,8 @@ aside: false
 Шумят, пугают и *наверное* ничего не ломают.
 
 ## Петарда «Мелочь»
-
+---
+Взрываются слабо
 <ItemCard>
 <Card style="overflow: hidden;" class="m-0">
     <template #header>
@@ -20,8 +21,6 @@ aside: false
       <ul>
       <li>Крафт</li>
       </ul>
-      <Divider />
-      <p>Текстура: sm1lly</p>
     </template>
 </Card>
 </ItemCard>
@@ -32,7 +31,8 @@ aside: false
 />
 
 ## Петарда «П*здец»
-
+---
+Взрываются сильно
 <ItemCard>
 <Card style="overflow: hidden;" class="m-0">
     <template #header>
@@ -45,8 +45,6 @@ aside: false
       <ul>
       <li>Крафт</li>
       </ul>
-      <Divider />
-      <p>Текстура: sm1lly</p>
     </template>
 </Card>
 </ItemCard>
@@ -57,7 +55,8 @@ aside: false
 />
 
 ## Связка петард «Стая котят»
-
+---
+Взрываются много
 <ItemCard>
 <Card style="overflow: hidden;" class="m-0">
     <template #header>
@@ -70,11 +69,9 @@ aside: false
       <ul>
       <li>Крафт</li>
       </ul>
-      <Divider />
-      <p>Текстура: sm1lly</p>
     </template>
 </Card>
-</ItemCard>.
+</ItemCard>
 
 <CraftingGrid
   :ingredients="bunchRecipe"

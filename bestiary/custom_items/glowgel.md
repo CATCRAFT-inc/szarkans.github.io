@@ -21,12 +21,18 @@ description: Светогель - невидимый светящийся гел
 </Card>
 </ItemCard>
 
-Невидимый светящийся гель. Размещает [источник света](https://ru.minecraft.wiki/w/%D0%91%D0%BB%D0%BE%D0%BA_%D1%81%D0%B2%D0%B5%D1%82%D0%B0) 3 уровня. Уровень освещения можно увеличивать на 3 с каждым использованием по тому же месту, вплоть до 15.
+Невидимый светящийся гель. Размещает [Источник света](https://ru.minecraft.wiki/w/%D0%91%D0%BB%D0%BE%D0%BA_%D1%81%D0%B2%D0%B5%D1%82%D0%B0) 3 уровня. Уровень освещения можно увеличивать на 3 с каждым использованием по тому же месту, вплоть до 15.
 
-![Светогель на стенах подвала](/assets/updates/8season/8_0_4/glowgel.gif)
+<CardGrid>
+<Card style="overflow: hidden;" class="m-0">
+    <template #header>
+        <Image alt="Светогель на стенах" src="/assets/updates/8season/8_0_4/glowgel.gif" preview />
+    </template>
+</Card>
+</CardGrid>
 
-### Крафт
-
+## Получение
+---
 <CraftingGrid
   :ingredients="gelRecipe"
   :result="gelResult"
