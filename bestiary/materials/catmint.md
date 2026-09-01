@@ -25,6 +25,29 @@ description: Кошачья мята - что нюхачи выкапывают 
 
 ![Заросли кошачьей мяты](/assets/updates/8season/8_0_4/catmint.webp){ width=60% }
 
+## Сушёная кошачья мята
+
+<ItemCard>
+<Card style="overflow: hidden;" class="m-0">
+    <template #header>
+        <Image alt="Сушёная кошачья мята" src="/assets/crafts/cat_weed.webp" width="40%"/>
+    </template>
+    <template #title>Сушёная кошачья мята</template>
+    <template #content>
+      <Divider />
+      <h3>Получение:</h3>
+      <ul>
+      <li>Костёр</li>
+      <li>Коптильня</li>
+      </ul>
+    </template>
+</Card>
+</ItemCard>
+
+Свежий лист на огонь — и он высыхает. В коптильне быстрее, на костре дольше, результат один и тот же.
+
+Сама по себе сушёная мята ничего не делает. Она нужна для Бланта.
+
 ## Блант
 
 <ItemCard>
@@ -54,6 +77,15 @@ description: Кошачья мята - что нюхачи выкапывают 
   :result="bluntResult"
 />
 
+## Бумага из мяты
+
+Если под рукой нет тростника, три листа мяты складываются в лист бумаги. Обмен так себе — тростник даёт втрое больше, — но выручает.
+
+<CraftingGrid
+  :ingredients="paperRecipe"
+  :result="paperResult"
+/>
+
 <script setup>
 
 const paper = {
@@ -65,15 +97,29 @@ const catmint = {
   image: "/assets/crafts/catmint.webp",
   name: "Кошачья мята"
 }
+const catWeed = {
+  image: "/assets/crafts/cat_weed.webp",
+  name: "Сушёная кошачья мята"
+}
 
 const bluntRecipe = [
   [paper, paper, paper],
-  [catmint, catmint, catmint],
+  [catWeed, catWeed, catWeed],
 ]
 
 const bluntResult = {
   image: '/assets/crafts/blunt.webp',
   name: 'Блант',
+  count: 1
+}
+
+const paperRecipe = [
+  [catmint, catmint, catmint],
+]
+
+const paperResult = {
+  image: "https://minecraft.wiki/images/Invicon_Paper.png",
+  name: 'Бумага',
   count: 1
 }
 </script>

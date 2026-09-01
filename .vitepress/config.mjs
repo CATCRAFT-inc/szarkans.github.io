@@ -115,7 +115,7 @@ export default defineConfig({
     'gameplay/unique/mods/figura.md',      // ждёт решения по моду
 
     // Скрыто 09.08.2026: страница есть, механики на сервере пока нет.
-    'gameplay/unique/clans.md',            // кланы не реализованы
+    // Кланы вернулись 01.09.2026 — реализованы в 8.0.5b.
     'gameplay/unique/catenary.md',         // верёвки с физикой
   ],
 
@@ -403,7 +403,7 @@ export default defineConfig({
     langMenuLabel: 'Изменить язык',
     nav: [
       { text: 'История', link: '/history/', activeMatch: '^/history/' },
-      { text: 'Обновления', link: '/updates/8season/8_0_4', activeMatch: '^/updates/' },
+      { text: 'Обновления', link: '/updates/8season/8_0_5_1', activeMatch: '^/updates/' },
       { text: 'Карта мира', link: 'https://map.catcraft.ru' },
       { text: 'Discord', link: 'https://discord.gg/6f3FwFRJWC' },
       { text: 'Telegram', link: 'https://t.me/catcraftmc_tg' }
@@ -422,19 +422,27 @@ export default defineConfig({
           text: "8 сезон",
           items: [
             {
-              "text": "8.0.4",
+              "text": "8.0.5.1b",
+              link: "/updates/8season/8_0_5_1.md"
+            },
+            {
+              "text": "8.0.5b",
+              link: "/updates/8season/8_0_5.md"
+            },
+            {
+              "text": "8.0.4b",
               link: "/updates/8season/8_0_4.md"
             },
             {
-              "text": "8.0.3",
+              "text": "8.0.3b",
               link: "/updates/8season/8_0_3.md"
             },
             {
-              "text": "8.0.2",
+              "text": "8.0.2b",
               link: "/updates/8season/8_0_2.md"
             },
             {
-              "text": "8.0.1",
+              "text": "8.0.1b",
               link: "/updates/8season/8_0_1.md"
             }
           ]

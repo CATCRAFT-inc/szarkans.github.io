@@ -64,6 +64,7 @@ export const bestiarySidebar = [
       { text: 'Награды строителям', link: '/bestiary/usable/awards.md', icon: '/assets/crafts/builder_glove.webp' },
       { text: 'Возвратная конфета', link: '/bestiary/usable/candy.md', icon: '/assets/crafts/recovery_candy.webp' },
       { text: 'Возвратные часы', link: '/bestiary/usable/recovery_clock.md', icon: '/assets/crafts/recovery_clock.webp' },
+      { text: 'Таблетка от несварения', link: '/bestiary/usable/antipoop_pill.md', icon: '/assets/crafts/antipoop_pill.webp' },
       { text: 'Кошачья мята', link: '/bestiary/materials/catmint.md', icon: '/assets/crafts/catmint.webp' },
       { text: 'Говно', link: '/bestiary/materials/poop.md', icon: '/assets/crafts/poop.webp' },
     ]
@@ -95,8 +96,8 @@ export const mechanicsSidebar = [
         blurb: 'Ловля превратилась в мини-игру, а не в АФК с зажатым ПКМ' },
       { text: 'Рисование', link: '/gameplay/unique/artmap.md', icon: '/assets/crafts/easel.webp',
         blurb: 'Садись за мольберт и рисуй свои шедевры прямо в игре' },
-      // { text: 'Кланы β', link: '/gameplay/unique/clans.md', icon: '/assets/mechanics/filled_map.webp',
-      //   blurb: 'Гильдия, ОПГ или банда — собирай своих' },  - скрыто: не реализовано
+      { text: 'Кланы', link: '/gameplay/unique/clans.md', icon: '/assets/crafts/clan_passport.webp',
+        blurb: 'Гильдия, ОПГ или банда — собирай своих' },
     ]
   },
   {
@@ -104,7 +105,8 @@ export const mechanicsSidebar = [
     items: [
       { text: 'Команды', link: '/gameplay/unique/commands.md', icon: '/assets/mechanics/writable_book.webp' },
       { text: 'Мурки', link: '/gameplay/unique/catcoins.md', icon: '/assets/crafts/catcoin.webp' },
-      // { text: 'Профиль игрока', link: '/gameplay/unique/qol/profile.md' },
+      { text: 'Профиль игрока', link: '/gameplay/unique/qol/profile.md', icon: '/assets/crafts/profile_heart.webp' },
+      { text: 'Орден Креста', link: '/gameplay/unique/cross_order.md', icon: '/assets/crafts/opk_chestplate.webp' },
       { text: 'Почта', link: '/gameplay/unique/mail.md', icon: '/assets/crafts/mailbell.webp' },
       { text: 'Достижения сообщества', link: '/gameplay/unique/qol/rewards.md', icon: '/assets/mechanics/nether_star.webp' },
       // { text: 'Подключение к Дискорду', link: '/gameplay/unique/qol/discord_link.md' }, - скрыто
