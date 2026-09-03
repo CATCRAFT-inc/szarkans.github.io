@@ -52,21 +52,15 @@ aside: false
 </Card>
 <Card style="width: 11rem; overflow: hidden" class="m-0">
     <template #header>
-        <img alt="user header" src="https://vzge.me/face/512/cristalYAQ?y=-40" />
-    </template>
-    <template #title>cristalYAQ</template>
-</Card>
-<Card style="width: 11rem; overflow: hidden" class="m-0">
-    <template #header>
-        <img alt="user header" src="https://vzge.me/face/512/Abauch?y=-40" />
-    </template>
-    <template #title>Abauch</template>
-</Card>
-<Card style="width: 11rem; overflow: hidden" class="m-0">
-    <template #header>
         <img alt="user header" src="https://vzge.me/face/512/Lex_Lokk?y=-40" />
     </template>
     <template #title>Lex_Lokk</template>
+</Card>
+<Card style="width: 11rem; overflow: hidden" class="m-0">
+    <template #header>
+        <img alt="user header" src="https://vzge.me/face/512/Ruthenium13?y=-40" />
+    </template>
+    <template #title>Ruthenium13</template>
 </Card>
 </CardGrid>
 
