@@ -29,14 +29,6 @@
   :result="bellResult"
 />
 
-## Мешок
-
-Мешок собирается из **кроличьих шкурок и нити**
-
-<CraftingGrid
-  :ingredients="bundleRecipe"
-  :result="bundleResult"
-/>
 
 ## Снежный блок
 
@@ -84,12 +76,6 @@ const bellRecipe = [
 ]
 const bellResult = { image: "https://minecraft.wiki/images/Invicon_Bell.png?325d0", name: "Колокол", count: 1 }
 
-const bundleRecipe = [
-  [string, hide, string],
-  [hide, null, hide],
-  [hide, hide, hide],
-]
-const bundleResult = { image: "https://minecraft.wiki/images/Invicon_Bundle.png", name: "Мешок", count: 1 }
 
 const snowRecipe = [[snowball, snowball]]
 const snowResult = { image: "https://minecraft.wiki/images/Invicon_Snow_Block.png", name: "Снежный блок", count: 1 }

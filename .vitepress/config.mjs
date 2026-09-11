@@ -422,6 +422,10 @@ export default defineConfig({
           text: "8 сезон",
           items: [
             {
+              "text": "8.0.5.2b",
+              link: "/updates/8season/8_0_5_2.md"
+            },
+            {
               "text": "8.0.5.1b",
               link: "/updates/8season/8_0_5_1.md"
             },

@@ -33,7 +33,7 @@ export const bestiarySidebar = [
   {
     text: 'Разное',
     items: [
-      { text: 'Жители Столицы', link: '/bestiary/mobs/npc.md', icon: '/assets/mechanics/name_tag.webp' },
+      { text: 'Жители Мятной долины', link: '/bestiary/mobs/npc.md', icon: '/assets/mechanics/name_tag.webp' },
       { text: 'Зачарования', link: '/bestiary/enchantments.md', icon: '/assets/crafts/enchanted_cobblestone.webp' },
     ]
   },
@@ -48,12 +48,14 @@ export const bestiarySidebar = [
       { text: 'Киянка', link: '/bestiary/custom_items/mallet.md', icon: '/assets/crafts/mallet.webp' },
       { text: 'Светогель', link: '/bestiary/custom_items/glowgel.md', icon: '/assets/crafts/glowgel.webp' },
       { text: 'Фотоаппарат', link: '/bestiary/custom_items/camera.md', icon: '/assets/crafts/camera.webp' },
-      { text: 'Рисование', link: '/bestiary/custom_items/painting_tools.md', icon: '/assets/crafts/easel.webp' },
+      { text: 'Рисование', link: '/bestiary/custom_items/painting_tools.md', icon: '/assets/crafts/easel.webp' }
     ]
   },
   {
     text: 'Предметы',
     items: [
+      { text: 'Букашки', link: '/bestiary/custom_items/bugs.md', icon: '/assets/crafts/caught_bee.webp' },
+      { text: 'Ремнаборы', link: '/bestiary/custom_items/repair_kits.md', icon: '/assets/crafts/any_repair_kit.webp' },
       { text: 'Стеклянный меч', link: '/bestiary/custom_items/glass_sword.md', icon: '/assets/crafts/glass_sword.webp' },
       { text: 'Тренировочный манекен', link: '/bestiary/custom_items/dummy.md', icon: '/assets/crafts/dummy.webp' },
       { text: 'Петарды', link: '/bestiary/custom_items/firecrackers.md', icon: '/assets/crafts/petard_small.webp' },
@@ -61,7 +63,7 @@ export const bestiarySidebar = [
       { text: 'Почта', link: '/bestiary/usable/mail.md', icon: '/assets/crafts/mailbell.webp' },
       { text: 'Руны обликов', link: '/bestiary/usable/runes.md', icon: '/assets/crafts/rune.webp' },
       { text: 'Древние пластинки', link: '/bestiary/usable/discs.md', icon: '/assets/crafts/no_homo_disc.webp' },
-      { text: 'Награды строителям', link: '/bestiary/usable/awards.md', icon: '/assets/crafts/builder_glove.webp' },
+      { text: 'Награды за ачивки', link: '/bestiary/custom_items/awards.md', icon: '/assets/crafts/dataminer.webp' },
       { text: 'Возвратная конфета', link: '/bestiary/usable/candy.md', icon: '/assets/crafts/recovery_candy.webp' },
       { text: 'Возвратные часы', link: '/bestiary/usable/recovery_clock.md', icon: '/assets/crafts/recovery_clock.webp' },
       { text: 'Таблетка от несварения', link: '/bestiary/usable/antipoop_pill.md', icon: '/assets/crafts/antipoop_pill.webp' },
@@ -113,6 +115,7 @@ export const mechanicsSidebar = [
       { text: 'Маленькие механики', link: '/gameplay/unique/qol/small_features.md', icon: '/assets/mechanics/bundle.webp' },
       { text: 'Свои пластинки', link: '/gameplay/unique/burner.md', icon: '/assets/crafts/radiotrance_disc.webp' },
       { text: 'Войсчат', link: '/gameplay/unique/mods/voicechat.md', icon: '/assets/mechanics/goat_horn.webp' },
+      { text: 'Эффекты', link: '/gameplay/unique/effects.md', icon: '/assets/crafts/caught_bee.webp' },
       // { text: 'Реалистичные верёвки', link: '/gameplay/unique/catenary.md', icon: '/assets/mechanics/lead.webp' }, - скрыто
       // { text: 'Мебель и декорации', link: '/gameplay/unique/decor.md' }, - скрыто
       // { text: 'Гардеробная обликов', link: '/gameplay/unique/wardrobe.md' }, - скрыто
@@ -129,7 +132,6 @@ export const mechanicsSidebar = [
   {
     text: 'Геймплейные гайды',
     items: [
-      { text: 'Как провести ивент?', link: '/guides/gameplay/create_event.md', icon: '/assets/mechanics/firework_rocket.webp' },
       { text: 'Как сделать разноцветный ник?', link: '/guides/gameplay/rgb_nick.md', icon: '/assets/mechanics/magenta_dye.webp' },
       { text: 'Как поставить другой скин?', link: '/guides/gameplay/set_skin.md', icon: '/assets/mechanics/armor_stand.webp' },
     ]
