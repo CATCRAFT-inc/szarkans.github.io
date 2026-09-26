@@ -42,7 +42,7 @@ aside: false
 </Card>
 <Card style="overflow: hidden;" class="m-0">
     <template #header>
-        <Image alt="Использование детонатора" src="/assets/bestiary/items/Detonator_use.gif" preview />
+        <Image alt="Использование детонатора" src="/assets/bestiary/items/detonator_use.gif" preview />
     </template>
     <template #subtitle>Использование детонатора</template>
 </Card>
