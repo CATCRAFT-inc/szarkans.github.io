@@ -3,7 +3,7 @@ aside: false
 ---
 
 # Кошелёк
-
+---
 <ItemCard>
 <Card style="overflow: hidden;" class="m-0">
     <template #header>
@@ -26,10 +26,10 @@ aside: false
 
 ## Получение
 ---
-<CraftingGrid
-  :ingredients="walletRecipe"
-  :result="walletResult"
-/>
+**Крафт**
+| Ингредиенты | Рецепты | Результат |
+| --- | --- | --- |
+| [Мешочек](https://minecraft.wiki/images/Invicon_Bundle.png) + [Мурка](/gameplay/unique/catcoins) | <CraftingGrid :ingredients="walletRecipe" :result="walletResult" /> | Полученный кошелёк уже будет хранить 1 мурку |
 
 <script setup>
 
@@ -40,7 +40,8 @@ const bundle = {
 }
 const catcoin = {
   image: "/assets/crafts/catcoin.webp",
-  name: "Мурка"
+  name: "Мурка",
+  link: "/gameplay/unique/catcoins"
 }
 
 const walletRecipe = [

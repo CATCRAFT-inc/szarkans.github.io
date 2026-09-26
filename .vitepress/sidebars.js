@@ -54,6 +54,7 @@ export const bestiarySidebar = [
   {
     text: 'Предметы',
     items: [
+      { text: 'Бомбы', link: '/bestiary/custom_items/bombs.md', icon: '/assets/crafts/poop_bomb.webp' },
       { text: 'Букашки', link: '/bestiary/custom_items/bugs.md', icon: '/assets/crafts/caught_bee.webp' },
       { text: 'Ремнаборы', link: '/bestiary/custom_items/repair_kits.md', icon: '/assets/crafts/any_repair_kit.webp' },
       { text: 'Стеклянный меч', link: '/bestiary/custom_items/glass_sword.md', icon: '/assets/crafts/glass_sword.webp' },
@@ -69,6 +70,13 @@ export const bestiarySidebar = [
       { text: 'Таблетка от несварения', link: '/bestiary/usable/antipoop_pill.md', icon: '/assets/crafts/antipoop_pill.webp' },
       { text: 'Кошачья мята', link: '/bestiary/materials/catmint.md', icon: '/assets/crafts/catmint.webp' },
       { text: 'Говно', link: '/bestiary/materials/poop.md', icon: '/assets/crafts/poop.webp' },
+      { text: 'Вонючая бомба', link: '/bestiary/custom_items/poop_bomb.md', icon: '/assets/crafts/poop_bomb.webp' },
+      { text: 'Грязная бомба', link: '/bestiary/custom_items/dirt_bomb.md', icon: '/assets/crafts/dirt_bomb.webp' },
+      { text: 'Детонатор', link: '/bestiary/custom_items/detonator.md', icon: '/assets/crafts/detonator.webp' },
+      { text: 'Прыгающая картошка', link: '/bestiary/custom_items/jumping_potato.md', icon: '/assets/crafts/jumpin_potato.webp' },
+      { text: 'Прыгающее зелье', link: '/bestiary/custom_items/bouncy_potion.md', icon: '/assets/crafts/bouncy_potion.webp' },
+      { text: 'Незеритовая губка', link: '/bestiary/custom_items/lava_sponge.md', icon: '/assets/crafts/lava_sponge.webp' },
+      { text: 'Мячик', link: '/bestiary/custom_items/baseball_ball.md', icon: '/assets/crafts/ball.webp' },
     ]
   },
   {

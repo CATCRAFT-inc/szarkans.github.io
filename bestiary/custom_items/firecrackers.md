@@ -3,80 +3,19 @@ aside: false
 ---
 
 # Петарды
-
-Шумят, пугают и *наверное* ничего не ломают.
-
-## Петарда «Мелочь»
 ---
-Взрываются слабо
-<ItemCard>
-<Card style="overflow: hidden;" class="m-0">
-    <template #header>
-        <Image alt="Петарда Мелочь" src="/assets/crafts/petard_small.webp" width="40%"/>
-    </template>
-    <template #title>Петарда «Мелочь»</template>
-    <template #content>
-      <Divider />
-      <h3>Получение:</h3>
-      <ul>
-      <li>Крафт</li>
-      </ul>
-    </template>
-</Card>
-</ItemCard>
+Предмет типа [**Бомба**](bombs). При взрыве издаёт хлопок, в зависимости от вида. Петарды не наносят урона и не ломают блоки. Отскакивают вплоть до **3** раз после броска.
 
-<CraftingGrid
-  :ingredients="smallRecipe"
-  :result="smallResult"
-/>
-
-## Петарда «П*здец»
+## Получение
 ---
-Взрываются сильно
-<ItemCard>
-<Card style="overflow: hidden;" class="m-0">
-    <template #header>
-        <Image alt="Большая петарда" src="/assets/crafts/petard_big.webp" width="40%"/>
-    </template>
-    <template #title>Петарда «П*здец»</template>
-    <template #content>
-      <Divider />
-      <h3>Получение:</h3>
-      <ul>
-      <li>Крафт</li>
-      </ul>
-    </template>
-</Card>
-</ItemCard>
 
-<CraftingGrid
-  :ingredients="bigRecipe"
-  :result="bigResult"
-/>
+**Крафт**
+| Ингредиенты | Рецепты | Результат |
+| --- | --- | --- |
+| [Порох](/bestiary/materials/poop) + [Бумага](firecrackers) + Нитка | <CraftingGrid :ingredients="smallRecipe" :result="smallResult" /> | Петарда "Мелочь", взрывается негромко |
+| [Порох](/bestiary/materials/poop) + [Бумага](firecrackers) + Нитка | <CraftingGrid :ingredients="bigRecipe" :result="bigResult" /> | Петарда "Пиздец", взрывается со звуком динамита |
+| Четыре петард "Мелочь" | <CraftingGrid :ingredients="bunchRecipe" :result="bunchResult" /> | Связка петард "Стая котят", плеяда мелких хлопков |
 
-## Связка петард «Стая котят»
----
-Взрываются много
-<ItemCard>
-<Card style="overflow: hidden;" class="m-0">
-    <template #header>
-        <Image alt="Связка петард" src="/assets/crafts/petard_bunch.webp" width="40%"/>
-    </template>
-    <template #title>Связка петард «Стая котят»</template>
-    <template #content>
-      <Divider />
-      <h3>Получение:</h3>
-      <ul>
-      <li>Крафт</li>
-      </ul>
-    </template>
-</Card>
-</ItemCard>
-
-<CraftingGrid
-  :ingredients="bunchRecipe"
-  :result="bunchResult"
-/>
 
 <script setup>
 
@@ -90,14 +29,20 @@ const paper = {
   name: "Бумага",
   link: "https://ru.minecraft.wiki/w/Бумага"
 }
+const string = {
+  image: "https://minecraft.wiki/images/String_JE2_BE2.png?25d69",
+  name: "Нитка",
+  link: "https://ru.minecraft.wiki/w/Нитка"
+}
 const small = {
   image: "/assets/crafts/petard_small.webp",
   name: "Петарда «Мелочь»"
 }
 
 const smallRecipe = [
-  [gunpowder, paper],
-  [gunpowder, paper],
+  [ , paper, string],
+  [paper, gunpowder],
+  [gunpowder],
 ]
 const smallResult = {
   image: '/assets/crafts/petard_small.webp',
@@ -106,9 +51,9 @@ const smallResult = {
 }
 
 const bigRecipe = [
-  [gunpowder, paper],
-  [gunpowder, paper],
-  [gunpowder, paper],
+  [ , paper, string],
+  [paper, gunpowder, gunpowder],
+  [gunpowder, gunpowder],
 ]
 const bigResult = {
   image: '/assets/crafts/petard_big.webp',
@@ -123,6 +68,6 @@ const bunchRecipe = [
 const bunchResult = {
   image: '/assets/crafts/petard_bunch.webp',
   name: 'Связка петард «Стая котят»',
-  count: 1
+  count: 2
 }
 </script>
