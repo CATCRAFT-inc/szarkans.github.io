@@ -76,7 +76,7 @@ export const bestiarySidebar = [
       { text: 'Прыгающая картошка', link: '/bestiary/custom_items/jumping_potato.md', icon: '/assets/crafts/jumpin_potato.webp' },
       { text: 'Прыгающее зелье', link: '/bestiary/custom_items/bouncy_potion.md', icon: '/assets/crafts/bouncy_potion.webp' },
       { text: 'Незеритовая губка', link: '/bestiary/custom_items/lava_sponge.md', icon: '/assets/crafts/lava_sponge.webp' },
-      { text: 'Мячик', link: '/bestiary/custom_items/baseball_ball.md', icon: '/assets/crafts/ball.webp' },
+      { text: 'Мячик', link: '/bestiary/custom_items/baseball_ball.md', icon: '/assets/crafts/ball.webp' }
     ]
   },
   {
