@@ -39,5 +39,3 @@ aside: false
 | Ингредиенты | Рецепты |
 | --- | --- |
 | Любое [зелье](https://ru.minecraft.wiki/w/Зелье) + [Сгусток слизи](https://ru.minecraft.wiki/w/Сгусток_слизи) | <Image alt="Прыгающее зелье" src="/assets/bestiary/items/bouncy_potion_craft.webp" width="80%"/> |
-
-При сборе урожая [картофеля](https://ru.minecraft.wiki/w/Картофель), прыгающая картошка может выпасть с шансом **2.5%**
