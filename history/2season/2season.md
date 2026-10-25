@@ -120,9 +120,9 @@ description: История сервера Кошкокрафт - 2 сезон
 
 - Была подготовка в вайпу и новому сезону
 
-- Сезон закончился 27 июня 2022 года. Карта пропала не сразу: в сентябре 2022 она ещё работала на втором сервере, и игроки читали в ней свои книги. Дальше её след теряется, но несколько книг уцелели в записях ReplayMod.
+- Сезон закончился 27 июня 2022 года. 
 
-<Button as="a" href="https://drive.google.com/file/d/1sawUUSQsH7MrBxY5VEBbjITSFfkJ-p2c/view?usp=sharing" target="_blank" rel="noopener" label="Скачать still life мир 2 сезона" />
+<Button as="a" href="https://drive.google.com/file/d/1sawUUSQsH7MrBxY5VEBbjITSFfkJ-p2c/view?usp=sharing" target="_blank" rel="noopener" label="Скачат мир 2 сезона" icon="pi pi-download" />
 
 <Button as="a" href="/history/2season/library" label="Библиотека 2 сезона" icon="pi pi-book" />
 
